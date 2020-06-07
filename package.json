@@ -1,0 +1,26 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adhage93/PortfolioSite.git"
+  },
+  "author": "Aditya S. Dhage",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/adhage93/PortfolioSite/issues"
+  },
+  "homepage": "https://github.com/adhage93/PortfolioSite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
