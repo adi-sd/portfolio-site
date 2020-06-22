@@ -2,9 +2,18 @@ div {
   display: block;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(/images/back-ground.svg);
+  background-size: cover;
+}
+
 #navbar-section {
   position: relative;
-  background-color: #127681;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
@@ -68,6 +77,16 @@ div {
   display: block;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(/images/back-ground.svg);
+  background-size: cover;
+}
+
 #circle {
   position: relative;
   right: 10%;
@@ -93,5 +112,19 @@ div {
 #intro-section .title .about-text {
   width: 50%;
   margin-left: 25%;
+}
+
+div {
+  display: block;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(/images/back-ground.svg);
+  background-size: cover;
 }
 /*# sourceMappingURL=styles.css.map */
