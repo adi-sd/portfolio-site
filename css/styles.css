@@ -1,130 +1,15 @@
-div {
-  display: block;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
+/* Genaral Styles */
 
 body {
-  background-image: url(/images/back-ground.svg);
-  background-size: cover;
+    background-color: #040d12;
 }
 
-#navbar-section {
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.5;
+a {
+    text-decoration: none;
 }
 
-#navbar-section header {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
+/* Navbar */
 
-#navbar-section header ul {
-  padding-left: 0;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-  position: relative;
-  float: right;
-  display: block;
-  list-style-type: disc;
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+.navbar-brand {
+    margin: 0 1.5rem;
 }
-
-#navbar-section header ul li {
-  display: block;
-  float: left;
-  margin: 0 0 0 2em;
-}
-
-#navbar-section header ul li a {
-  color: #10375c;
-  font-size: 1.6rem;
-  display: inline-block;
-}
-
-#navbar-section header ul li a:hover {
-  color: #f3c623;
-}
-
-#navbar-section header #header-logo {
-  font-size: 36px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 72px;
-  width: 72px;
-}
-
-#navbar-section header #header-logo .logo {
-  position: absolute;
-  display: block;
-  height: 72px;
-  width: 72px;
-}
-
-div {
-  display: block;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  background-image: url(/images/back-ground.svg);
-  background-size: cover;
-}
-
-#circle {
-  position: relative;
-  right: 10%;
-  margin-top: -65%;
-  width: 120%;
-  padding-top: 120%;
-  background-color: #127681;
-  border-radius: 50%;
-  z-index: -2;
-}
-
-#intro-section {
-  position: relative;
-}
-
-#intro-section .title {
-  position: relative;
-  margin-top: -45%;
-  z-index: 0;
-  text-align: center;
-}
-
-#intro-section .title .about-text {
-  width: 50%;
-  margin-left: 25%;
-}
-
-div {
-  display: block;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  background-image: url(/images/back-ground.svg);
-  background-size: cover;
-}
-/*# sourceMappingURL=styles.css.map */
