@@ -2,14 +2,34 @@
 
 body {
     background-color: #040d12;
+    font-family: "Playfair Display", serif;
+    color: white;
 }
 
 a {
     text-decoration: none;
 }
 
+.fa-solid {
+    color: white;
+}
+
 /* Navbar */
 
 .navbar-brand {
-    margin: 0 1.5rem;
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+    margin-left: 1.8rem;
+    margin-right: 0;
+}
+
+.nav-item {
+    margin: 0 2rem;
+}
+
+.icon-img {
+    height: 50px;
+    animation-name: fadeInOut, moveLeft300px, bounce;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-iteration-count: 2, 1, 5;
 }
