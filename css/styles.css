@@ -4,12 +4,8 @@ body {
     background-color: #040d12;
     font-family: "Playfair Display", serif;
     color: white;
-    padding-top: 12.5%;
-    padding-bottom: 0%;
-}
-
-a {
-    text-decoration: none;
+    /* padding-top: 25vh; */
+    height: 100%;
 }
 
 /* Navbar */
@@ -21,43 +17,82 @@ a {
     margin-right: 0;
 }
 
+.brand-text {
+    font-size: 2.8rem;
+}
+
 .nav-item {
     margin: 0 2rem;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: black;
 }
 
 .icon-img {
-    height: 50px;
-    animation-name: fadeInOut, moveLeft300px, bounce;
-    animation-duration: 2.5s, 5s, 1s;
-    animation-iteration-count: 2, 1, 5;
+    height: 5rem;
 }
 
 /* Home */
 
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 3rem;
+    height: 42vh;
+}
+
 .home-image {
-    width: 300px;
-    height: 360px;
+    width: 35vh;
+    height: 42vh;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+    margin: 0;
+    padding: 0;
 }
 
 .home-text-1 {
-    font-size: 35px;
+    font-size: 1.8rem;
     display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 2.5rem;
 }
 
 .home-text-2 {
-    font-size: 50px;
+    font-size: 3.8rem;
     display: inline;
+    position: relative;
 }
 
 .home-text-3 {
-    font-size: 85px;
+    font-size: 8.5rem;
     display: inline;
+    position: relative;
+    margin-left: 1rem;
 }
 
 .home-text-4 {
-    font-size: 35px;
-    display: inline;
+    font-size: 2rem;
+    position: relative;
 }
+
+/* footer */
