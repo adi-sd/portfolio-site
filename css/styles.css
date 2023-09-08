@@ -96,3 +96,8 @@ a:hover {
 }
 
 /* footer */
+
+div.footer {
+    background-color: yellow;
+    height: 5vh;
+}
