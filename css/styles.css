@@ -5,7 +5,7 @@ body {
     font-family: "Playfair Display", serif;
     color: white;
     padding-top: 12.5%;
-    padding-bottom: 12.5%;
+    padding-bottom: 0%;
 }
 
 a {
@@ -32,16 +32,7 @@ a {
     animation-iteration-count: 2, 1, 5;
 }
 
-
 /* Home */
-
-.main-home {
-
-    display: flex;
-    position: absolute;
-    top: 30rem;
-
-}
 
 .home-image {
     width: 300px;
@@ -49,4 +40,24 @@ a {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.home-text-1 {
+    font-size: 35px;
+    display: inline;
+}
+
+.home-text-2 {
+    font-size: 50px;
+    display: inline;
+}
+
+.home-text-3 {
+    font-size: 85px;
+    display: inline;
+}
+
+.home-text-4 {
+    font-size: 35px;
+    display: inline;
 }
