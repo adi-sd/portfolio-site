@@ -26,15 +26,15 @@ body {
 #content-frame {
     border: 1px green solid;
     height: 800px;
-    /* overflow: hidden; */
-    position: relative;
+    overflow: hidden;
+    /* position: relative; */
 }
 
 #content-frame section {
     border: 1px orange solid;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    position: absolute;
+    /* position: absolute; */
     right: -100%;
     transition: right 0.5s;
 }
@@ -60,16 +60,20 @@ body {
 }
 
 .brand-text {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
 }
 
 .nav-item {
     margin: 0 2rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
-a:hover {
-    color: black;
+#main-navbar li {
+    cursor: pointer;
+}
+
+#main-navbar li:hover {
+    color: gray;
 }
 
 .icon-img {
