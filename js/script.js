@@ -7,62 +7,66 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let indicator = document.getElementById("indicator");
     let indicatorElementArray = indicator.getElementsByTagName("li");
 
-    // // Section Elements
-    // let contentFrame = document.getElementById("content-frame");
-    // let contentFrameArray = contentFrame.getElementsByTagName("section");
+    // Section Elements
+    let contentFrame = document.getElementById("content-frame");
+    let contentFrameArray = contentFrame.getElementsByTagName("section");
 
-    for (let i = 0; i < navbarElementArray.length; i++) {
+    for (let i = 0; i < contentFrameArray.length; i++) {
         navbarElementArray[i].addEventListener("click", function () {
             // Navbar Elements
-            for (let j = 0; j < indicatorElementArray.length; j++) {
-                navbarElementArray[j].classList.remove("active");
-            }
+            cleanNavigationElement(navbarElementArray, "active");
+            cleanNavigationElement(contentFrameArray, "current-displayed-class");
+
             this.classList.add("active");
-
-            let sectionSelector = this.getAttribute("data-selection");
-            let sectionToShow = document.querySelector(sectionSelector);
-
-            console.log("Going to - " + sectionSelector + " using Navbar");
-
-            if (sectionToShow) {
-                sectionToShow.scrollIntoView({ behavior: "instant" });
-            }
-
+            let currSectionSelector = scrollToDesiredSection(this, "Navbar Link");
+            console.log(currSectionSelector);
             // Make indicator active
-            for (let j = 0; j < indicatorElementArray.length; j++) {
-                if (indicatorElementArray[j].getAttribute("data-selection") === sectionSelector) {
-                    indicatorElementArray[j].classList.add("selected");
-                } else {
-                    indicatorElementArray[j].classList.remove("selected");
-                }
-            }
+            makeNavigationElementActive(indicatorElementArray, currSectionSelector, "selected");
         });
 
         indicatorElementArray[i].addEventListener("click", function () {
             // Indicator Elements
-            for (let j = 0; j < indicatorElementArray.length; j++) {
-                indicatorElementArray[j].classList.remove("selected");
-            }
+            cleanNavigationElement(indicatorElementArray, "selected");
+            cleanNavigationElement(contentFrameArray, "current-displayed-class");
 
             this.classList.add("selected");
-
-            let sectionSelector = this.getAttribute("data-selection");
-            let sectionToShow = document.querySelector(sectionSelector);
-
-            console.log("Going to - " + sectionSelector + " using Indicators");
-
-            if (sectionToShow) {
-                sectionToShow.scrollIntoView({ behavior: "instant" });
-            }
+            let currSectionSelector = scrollToDesiredSection(this, "Section Indicator");
 
             // Make Nav Item Active
-            for (let j = 0; j < navbarElementArray.length; j++) {
-                if (navbarElementArray[j].getAttribute("data-selection") === sectionSelector) {
-                    navbarElementArray[j].classList.add("active");
-                } else {
-                    navbarElementArray[j].classList.remove("active");
-                }
-            }
+            makeNavigationElementActive(navbarElementArray, currSectionSelector, "active");
         });
     }
+
+    let currentlyDisplayedSection = getCurrentlyActiveSection();
 });
+
+function makeNavigationElementActive(elementArray, currentSectionSelector, className) {
+    for (let i = 0; i < elementArray.length; i++) {
+        if (elementArray[i].getAttribute("data-selection") === currentSectionSelector) {
+            elementArray[i].classList.add(className);
+        } else {
+            elementArray[i].classList.remove(className);
+        }
+    }
+}
+
+function cleanNavigationElement(elementArray, className) {
+    for (let i = 0; i < elementArray.length; i++) {
+        elementArray[i].classList.remove(className);
+    }
+}
+
+function scrollToDesiredSection(currentNavElement, type) {
+    let sectionSelector = currentNavElement.getAttribute("data-selection");
+    let sectionToShow = document.querySelector(sectionSelector);
+    console.log("Going to - " + sectionSelector + " using " + type);
+    if (sectionToShow) {
+        sectionToShow.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    sectionToShow.classList.add("current-displayed-class");
+    return sectionSelector;
+}
+
+function getCurrentlyActiveSection(contentFrameArray) {
+    return document.querySelector("current-displayed-class");
+}

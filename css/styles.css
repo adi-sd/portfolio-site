@@ -26,9 +26,10 @@ body {
 
 #content-frame {
     /* border: 1px green solid; */
-    height: 800px;
+    height: 75vh;
     /* overflow: hidden; */
     /* position: relative; */
+    scroll-snap-type: mandatory;
 }
 
 #content-frame section {
@@ -41,7 +42,8 @@ body {
 }
 
 .frame.footer-frame {
-    height: calc(100vh - 150px - 800px);
+    position: fixed;
+    height: calc(100vh - 150px - 75vh);
 }
 
 .section-container {
@@ -146,6 +148,10 @@ body {
 
 /* Home */
 
+.home-content {
+    padding: 50px;
+}
+
 .home-content:hover {
     box-shadow: 0px 0px 10px 10px #141f25;
 }
@@ -205,6 +211,85 @@ body {
 
 /* about */
 
+.about-content {
+    font-size: 30px;
+    width: 80%;
+    height: 80%;
+    text-justify: distribute;
+}
+
+.about-card-container {
+    height: 100%;
+    width: 90%;
+}
+
+.card-navigation {
+    height: 100%;
+    width: 10%;
+}
+
+.about-cards {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.about-card-change {
+    width: 100%;
+    height: 10%;
+}
+
+.about-card {
+    width: 100%;
+    height: 100%;
+}
+
+.card-content {
+    height: 100%;
+    padding: 30px;
+}
+
+.card-header {
+    font-size: 3rem;
+    font-family: "WindSong", cursive;
+}
+
+.card-indicators {
+    list-style: none;
+}
+
+.card-indicators {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+.card-indicators span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s ease;
+}
+
+.card-indicators span:last-child {
+    margin-bottom: 0;
+}
+
+.ci-ele:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.ci-ele.selected {
+    background-color: rgba(255, 255, 255, 1);
+}
+
 /* footer */
 
 div.footer {
@@ -215,6 +300,7 @@ div.footer {
 
 nav.indicators {
     text-align: center;
+    max-height: 30px;
 }
 
 nav.indicators ul {
@@ -225,7 +311,6 @@ nav.indicators ul {
 nav.indicators ul li {
     display: inline-block;
     width: 100px;
-    height: 10px;
     margin: 0 10px;
     cursor: pointer;
     padding: 5px 0;
@@ -236,7 +321,6 @@ nav.indicators ul li {
 
 nav.indicators ul li span {
     position: absolute;
-    top: 3px;
     left: 0;
     right: 0;
     width: 100px;
@@ -252,4 +336,11 @@ nav.indicators ul li span {
 
 nav.indicators > ul > .selected span {
     background-color: rgba(255, 255, 255, 1);
+}
+
+#footer-row {
+    background-color: #3282b8;
+    height: 100px;
+    margin: 0;
+    padding: 0;
 }
