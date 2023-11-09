@@ -33,20 +33,22 @@
         <div class="frame nav-frame">
             <section id="navbar">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                    <div class="container-fluid container-fluid d-flex align-items-center mt-2">
-                        <a class="navbar-brand d-flex align-items-center" href="#home">
-                            <h2 class="brand-text"><i>Aditya S. Dhage</i></h2>
-                        </a>
-                        <div class="svg-icon-container mx-4">
-                            <svg
-                                class="svg-icon"
-                                width="50"
-                                height="50"
-                                viewBox="0 0 50 50"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <circle cx="25" cy="25" r="25" fill="white" />
-                            </svg>
+                    <div class="container-fluid container-fluid d-flex align-items-center m-4">
+                        <div class="navbar-logo d-flex align-items-center justify-content-center">
+                            <a class="navbar-brand ms-5" href="#home">
+                                <h2 class="brand-text"><i>Aditya S. Dhage</i></h2>
+                            </a>
+                            <div class="svg-icon-container me-5">
+                                <svg
+                                    class="svg-icon"
+                                    width="50"
+                                    height="50"
+                                    viewBox="0 0 50 50"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <circle cx="25" cy="25" r="25" fill="white" />
+                                </svg>
+                            </div>
                         </div>
                         <button
                             class="navbar-toggler"
@@ -77,31 +79,29 @@
             <!-- Home Section -->
 
             <section id="home">
-                <div class="home"><h1>Home</h1></div>
-                <!-- <div class="home">
-                    <div class="home-container d-flex flex-column align-items-center">
-                        <div class="row">
-                            <div class="home-text-container col-5">
-                                <div class="home-inner-text-container">
-                                    <h6 class="home-text-1"><i>Hi There!</i></h6>
-                                    <br />
-                                    <h1 class="home-text-2">I'm</h1>
-                                    <h1 class="home-text-3">Aditya</h1>
-                                    <br />
-                                    <p class="home-text-4"><i>A Software Developer in Making!</i></p>
-                                </div>
-                            </div>
-                            <div class="home-image-contianer col5">
-                                <img
-                                    src="./images/AdityaDhage.jpg"
-                                    class="home-image d-inline"
-                                    alt="Aditya Dhage Profile Picture"
-                                    loading="lazy"
-                                />
+                <!-- <div class="home"><h1>Home</h1></div> -->
+                <div class="home-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-inline-flex align-items-center justify-content-center">
+                        <div class="home-text-container my-4 ms-4">
+                            <div class="home-inner-text-container d-flex flex-column align-content-center">
+                                <h6 class="home-text-1"><i>Hi There!</i></h6>
+                                <br />
+                                <h1 class="home-text-2">I'm</h1>
+                                <h1 class="home-text-3 justify-content-center">Aditya</h1>
+                                <br />
+                                <p class="home-text-4"><i>A Software Developer in Making!</i></p>
                             </div>
                         </div>
+                        <div class="home-image-container my-4 mx-4 fading-border">
+                            <img
+                                src="./images/AdityaDhage.jpg"
+                                class="home-image"
+                                alt="Aditya Dhage Profile Picture"
+                                loading="lazy"
+                            />
+                        </div>
                     </div>
-                </div> -->
+                </div>
             </section>
 
             <!-- About Section -->
@@ -126,23 +126,18 @@
         </div>
 
         <!-- Footer Section -->
-        <div class="frame footer-frame">
+        <div class="frame footer-frame fixed-bottom">
             <section id="footer">
                 <!--Page Indicator Component-->
-                <div class="frame indicator-frame">
-                    <nav class="indicators">
-                        <ul id="indicator" class="transitionk">
-                            <li data-selection="#home" class="selected"></li>
-                            <li data-selection="#about"></li>
-                            <li data-selection="#work"></li>
-                            <li data-selection="#projects"></li>
-                            <li data-selection="#contact"></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer fixed-bottom">
-                    <footer class="footer-main"></footer>
-                </div>
+                <nav class="indicators">
+                    <ul id="indicator" class="transition">
+                        <li data-selection="#home" class="selected"><span class="indicator-shape"></span></li>
+                        <li data-selection="#about"><span class="indicator-shape"></span></li>
+                        <li data-selection="#work"><span class="indicator-shape"></span></li>
+                        <li data-selection="#projects"><span class="indicator-shape"></span></li>
+                        <li data-selection="#contact"><span class="indicator-shape"></span></li>
+                    </ul>
+                </nav>
             </section>
         </div>
         <!-- Bootstrap 5 JavaScript -->

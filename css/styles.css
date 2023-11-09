@@ -2,7 +2,8 @@
 
 body {
     background-color: #040d12;
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif; */
+    font-family: "Courier New", Courier, monospace;
     color: white;
     height: 100%;
     overflow-y: hidden;
@@ -24,41 +25,40 @@ body {
 }
 
 #content-frame {
-    border: 1px green solid;
+    /* border: 1px green solid; */
     height: 800px;
     overflow: hidden;
     /* position: relative; */
 }
 
 #content-frame section {
-    border: 1px orange solid;
+    /* border: 1px orange solid; */
     width: 100vw;
     height: 100%;
     transition: right 0.5s;
 }
 
-.frame.indicator-frame {
-    /* border: 1px blue solid; */
-    height: 20px;
-}
-
 .frame.footer-frame {
-    height: calc(100vh - 100px - 800px - 20px);
+    height: calc(100vh - 100px - 800px);
 }
 
 /* Navbar */
 
-.navbar-brand {
-    margin-left: 1.8rem;
-    margin-right: 0;
+.navbar-logo {
+    border-top: solid 1px #ffffff;
+    border-bottom: solid 1px #ffffff;
+    border-left: solid 10px #ffffff;
+    border-right: solid 10px #ffffff;
+    height: 60px;
 }
 
 .brand-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
 }
 
 .nav-item {
-    margin: 0 2rem;
+    margin: 0 3rem 0 0;
     font-size: 1.3rem;
 }
 
@@ -72,33 +72,47 @@ body {
 
 /* Navbar Brand Icon */
 
-.svg-icon-container {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.svg-icon-container:hover .circle-fill::before {
-    content: "";
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, #1b262c, #0f4c75, #3282b8, #bbe1fa, white);
-    animation: slideColor 0.5s forwards;
-}
-
-@keyframes slideColor {
-    to {
-        bottom: 0;
+@keyframes colorLoop {
+    0% {
+        fill: #bbe1fa;
+    }
+    10% {
+        fill: #3282b8;
+    }
+    20% {
+        fill: #0f4c75;
+    }
+    30% {
+        fill: #1b313d;
+    }
+    40% {
+        fill: #141f25;
+    }
+    60% {
+        fill: #141f25;
+    }
+    70% {
+        fill: #1b313d;
+    }
+    80% {
+        fill: #3282b8;
+    }
+    90% {
+        fill: #bbe1fa;
+    }
+    100% {
+        fill: #ffffff;
     }
 }
 
-/* Additional styles for the SVG to support the hover effect */
+.navbar-logo:hover .svg-icon circle {
+    animation: colorLoop 2s infinite linear;
+}
+
+.svg-icon-container .svg-icon circle {
+    transition: fill 0.5s;
+}
+
 .svg-icon-container svg {
     position: relative;
     z-index: 100;
@@ -107,36 +121,64 @@ body {
 /* Home */
 
 .home-container {
-    display: flex;
+    height: 100%;
 }
 
 .home-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 3rem;
-    height: 42vh;
+    position: relative;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.home-home-image-container {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
 }
 
 .home-image {
-    width: vh;
-    height: 42vh;
+    display: block;
+    height: 40vh;
+    width: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px 3px #1b313d;
+}
+
+.home-image-container:hover .home-image {
+    transform: scale(1.2);
 }
 
 .home-text-1 {
     font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: -35px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .home-text-2 {
     font-size: 3.8rem;
+    margin-top: 20px;
+    margin-bottom: -55px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .home-text-3 {
-    font-size: 8.5rem;
+    font-size: 9rem;
+    margin-top: 10px;
+    margin-bottom: -55px;
+    margin-left: 0px;
+    margin-right: 0;
+    font-weight: bolder;
 }
 
 .home-text-4 {
     font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* footer */
@@ -153,24 +195,37 @@ nav.indicators {
 
 nav.indicators ul {
     padding: 0;
+    list-style: none; /* Removes default list styling */
 }
 
 nav.indicators ul li {
     display: inline-block;
     width: 50px;
-    height: 3px;
-    border-radius: 4px;
+    height: 10px;
     margin: 0 10px;
-    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    padding: 5px 0;
+    position: relative;
     opacity: 0.3;
     transition: opacity 0.5s ease;
 }
 
-.transition li:hover {
-    opacity: 1; /* Fully visible state */
+nav.indicators ul li span {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: background-color 0.5s ease;
 }
 
-nav.indicators > ul > .selected {
-    opacity: 1;
+.transition li:hover span {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+nav.indicators > ul > .selected span {
+    background-color: rgba(255, 255, 255, 1);
 }
