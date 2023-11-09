@@ -140,11 +140,6 @@ body {
     box-shadow: 0px 0px 10px 10px #141f25;
 }
 
-.home-text-container {
-    position: relative;
-    /* font-family: 'Courier New', Courier, monospace; */
-}
-
 .home-home-image-container {
     display: inline-block;
     overflow: hidden;
@@ -164,40 +159,38 @@ body {
     transform: scale(1.2);
 }
 
+.home-text-container {
+    position: relative;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: "WindSong", cursive;
+}
+
 .home-text-1 {
-    font-size: 1.8rem;
-    margin-top: 20px;
+    font-size: 2.8rem;
+    margin-top: 0;
     margin-bottom: -35px;
     margin-left: 0;
     margin-right: 0;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
+    line-height: -20px;
 }
 
 .home-text-2 {
-    font-size: 3.8rem;
+    font-size: 4.5rem;
     margin-top: 20px;
-    margin-bottom: -55px;
-    margin-left: 0;
+    margin-bottom: -100px;
+    margin-left: 80px;
     margin-right: 0;
-    letter-spacing: -10px;
+    letter-spacing: 10px;
 }
 
 .home-text-3 {
-    font-size: 9rem;
-    margin-top: 10px;
-    margin-bottom: -55px;
-    margin-left: 0px;
-    margin-right: 0;
-    font-weight: bolder;
-    /* letter-spacing: -10px; */
+    font-size: 14rem;
+    margin: 0;
 }
 
-.home-text-4 {
-    font-size: 2rem;
-    margin-top: 20px;
-    margin-bottom: -30px;
-    margin-left: 0;
-    margin-right: 0;
+.home-text-3::first-letter {
+    font-size: 15rem;
 }
 
 /* footer */
