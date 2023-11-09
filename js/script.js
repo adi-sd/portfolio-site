@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let indicator = document.getElementById("indicator");
     let indicatorElementArray = indicator.getElementsByTagName("li");
 
-    // Section Elements
-    let contentFrame = document.getElementById("content-frame");
-    let contentFrameArray = contentFrame.getElementsByTagName("section");
+    // // Section Elements
+    // let contentFrame = document.getElementById("content-frame");
+    // let contentFrameArray = contentFrame.getElementsByTagName("section");
 
     for (let i = 0; i < navbarElementArray.length; i++) {
         navbarElementArray[i].addEventListener("click", function () {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             console.log("Going to - " + sectionSelector + " using Navbar");
 
             if (sectionToShow) {
-                sectionToShow.scrollIntoView({ behavior: "smooth" });
+                sectionToShow.scrollIntoView({ behavior: "instant" });
             }
 
             // Make indicator active
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             for (let j = 0; j < indicatorElementArray.length; j++) {
                 indicatorElementArray[j].classList.remove("selected");
             }
+
             this.classList.add("selected");
 
             let sectionSelector = this.getAttribute("data-selection");
@@ -51,15 +52,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
             console.log("Going to - " + sectionSelector + " using Indicators");
 
             if (sectionToShow) {
-                sectionToShow.scrollIntoView({ behavior: "smooth" });
+                sectionToShow.scrollIntoView({ behavior: "instant" });
             }
 
             // Make Nav Item Active
             for (let j = 0; j < navbarElementArray.length; j++) {
-                if (indicatorElementArray[j].getAttribute("data-selection") === sectionSelector) {
+                if (navbarElementArray[j].getAttribute("data-selection") === sectionSelector) {
                     navbarElementArray[j].classList.add("active");
                 } else {
-                    navbarElementArray[j].classList.add("active");
+                    navbarElementArray[j].classList.remove("active");
                 }
             }
         });
