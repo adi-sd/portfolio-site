@@ -44,6 +44,10 @@ body {
 
 /* Navbar */
 
+#navbar > nav:hover {
+    box-shadow: 0px 0px 10px 10px #141f25;
+}
+
 .navbar-logo {
     border-top: solid 1px #ffffff;
     border-bottom: solid 1px #ffffff;
@@ -62,6 +66,8 @@ body {
 .nav-item {
     margin: 0 3rem 0 0;
     font-size: 1.3rem;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 
 #main-navbar li {
@@ -126,6 +132,14 @@ body {
     height: 100%;
 }
 
+.home-content {
+    padding: 80px;
+}
+
+.home-content:hover {
+    box-shadow: 0px 0px 10px 10px #141f25;
+}
+
 .home-text-container {
     position: relative;
     /* font-family: 'Courier New', Courier, monospace; */
@@ -143,7 +157,7 @@ body {
     width: 100%;
     border-radius: 50%;
     transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px 3px #1b313d;
+    box-shadow: 0 0px 15px #141f25;
 }
 
 .home-image-container:hover .home-image {
@@ -156,6 +170,7 @@ body {
     margin-bottom: -35px;
     margin-left: 0;
     margin-right: 0;
+    letter-spacing: -2px;
 }
 
 .home-text-2 {
@@ -164,6 +179,7 @@ body {
     margin-bottom: -55px;
     margin-left: 0;
     margin-right: 0;
+    letter-spacing: -10px;
 }
 
 .home-text-3 {
@@ -173,6 +189,7 @@ body {
     margin-left: 0px;
     margin-right: 0;
     font-weight: bolder;
+    /* letter-spacing: -10px; */
 }
 
 .home-text-4 {
