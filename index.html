@@ -33,11 +33,21 @@
         <div class="frame nav-frame">
             <section id="navbar">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                    <div class="container-fluid">
-                        <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="container-fluid container-fluid d-flex align-items-center mt-2">
+                        <a class="navbar-brand d-flex align-items-center" href="#home">
                             <h2 class="brand-text"><i>Aditya S. Dhage</i></h2>
-                            <img class="icon-img align-items-center" src="./images/circle-icon.svg" alt="Circle Icon" />
                         </a>
+                        <div class="svg-icon-container mx-4">
+                            <svg
+                                class="svg-icon"
+                                width="50"
+                                height="50"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="25" cy="25" r="25" fill="white" />
+                            </svg>
+                        </div>
                         <button
                             class="navbar-toggler"
                             type="button"
@@ -66,12 +76,12 @@
         <div id="content-frame" class="horizontal-scroll">
             <!-- Home Section -->
 
-            <section id="home" class=".active-section">
+            <section id="home">
                 <div class="home"><h1>Home</h1></div>
                 <!-- <div class="home">
-                    <div class="home-container d-flex flex-lg-column align-items-lg-center">
+                    <div class="home-container d-flex flex-column align-items-center">
                         <div class="row">
-                            <div class="home-text-container col-lg-5">
+                            <div class="home-text-container col-5">
                                 <div class="home-inner-text-container">
                                     <h6 class="home-text-1"><i>Hi There!</i></h6>
                                     <br />
@@ -81,7 +91,7 @@
                                     <p class="home-text-4"><i>A Software Developer in Making!</i></p>
                                 </div>
                             </div>
-                            <div class="home-image-contianer col-lg-5">
+                            <div class="home-image-contianer col5">
                                 <img
                                     src="./images/AdityaDhage.jpg"
                                     class="home-image d-inline"

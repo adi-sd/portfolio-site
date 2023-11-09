@@ -19,10 +19,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
             this.classList.add("active");
 
-            // Section Elements
-            for (let j = 0; j < contentFrameArray.length; j++) {
-                contentFrameArray[j].classList.remove("active-section");
-            }
             let sectionSelector = this.getAttribute("data-selection");
             let sectionToShow = document.querySelector(sectionSelector);
 
@@ -49,10 +45,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
             this.classList.add("selected");
 
-            // Section Elements
-            for (let j = 0; j < contentFrameArray.length; j++) {
-                contentFrameArray[j].classList.remove("active-section");
-            }
             let sectionSelector = this.getAttribute("data-selection");
             let sectionToShow = document.querySelector(sectionSelector);
 
