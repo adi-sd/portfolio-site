@@ -49,12 +49,14 @@ body {
     border-bottom: solid 1px #ffffff;
     border-left: solid 10px #ffffff;
     border-right: solid 10px #ffffff;
-    height: 60px;
+    height: 50px;
 }
 
 .brand-text {
-    font-size: 2rem;
-    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-family: "WindSong", cursive;
+    margin-bottom: 2px;
+    margin-right: 10px;
 }
 
 .nav-item {
