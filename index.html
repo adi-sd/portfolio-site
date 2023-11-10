@@ -138,12 +138,12 @@
             <!-- About Section -->
             <section id="about" class="active-section">
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="section-content about-content d-flex">
-                        <div class="section-card-container d-flex flex-column">
+                    <div class="section-content about-content about-content d-flex flex-column">
+                        <div class="section-card-container d-flex">
                             <div class="section-cards">
                                 <div class="section-card active-section-card">
                                     <div class="card-content">
-                                        <div class="card-header">About -</div>
+                                        <div class="card-header">About :-</div>
                                         <div class="card-body">
                                             <p>Hi, I am Aditya Sanjay Dhage,</p>
                                             <p>
@@ -155,7 +155,7 @@
                                 </div>
                                 <div class="section-card">
                                     <div class="card-content">
-                                        <div class="card-header">Under-Graduate -</div>
+                                        <div class="card-header">Under-Graduate :-</div>
                                         <div class="card-body">
                                             <p>Hi, I am Aditya Sanjay Dhage,</p>
                                             <p>
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="section-card">
                                     <div class="card-content">
-                                        <div class="card-header">Graduate -</div>
+                                        <div class="card-header">Graduate :-</div>
                                         <div class="card-body">
                                             <p>Hi, I am Aditya Sanjay Dhage,</p>
                                             <p>
@@ -179,7 +179,7 @@
                                 </div>
                                 <div class="section-card">
                                     <div class="card-content">
-                                        <div class="card-header">Technical Skills -</div>
+                                        <div class="card-header">Technical Skills :-</div>
                                         <div class="card-body">
                                             <p>Hi, I am Aditya Sanjay Dhage,</p>
                                             <p>
@@ -190,76 +190,81 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section-card-change">
-                                <span class="card-change-icon">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="10" cy="10" r="10" />
-                                    </svg>
-                                </span>
-                                <div class="card-change-buttons d-inline-flex align-items-center">
+                            <div class="card-navigation d-flex align-items-center justify-content-center">
+                                <div class="card-indicators d-flex flex-column">
                                     <div
-                                        id="ccb-card-0"
-                                        class="ccb-ele nav-item nav-link active-card-change-button"
-                                        onclick="handleSectionCardChangeButtonEvent(this)"
+                                        id="ci-card-0"
+                                        class="ci-ele active-card-ind d-flex align-items-center justify-content-center"
+                                        onclick="handleSectionCardIndicatorEvent(this)"
                                     >
-                                        <span class="ccb-content">About</span>
-                                        <span class="ccb-icon">></span>
+                                        <span class="ci-shape"></span>
                                     </div>
                                     <div
-                                        id="ccb-card-1"
-                                        class="ccb-ele nav-item nav-link"
-                                        onclick="handleSectionCardChangeButtonEvent(this)"
+                                        id="ci-card-1"
+                                        class="ci-ele d-flex align-items-center justify-content-center"
+                                        onclick="handleSectionCardIndicatorEvent(this)"
                                     >
-                                        <span class="ccb-content">Under-Graduate</span>
-                                        <span class="ccb-icon">></span>
+                                        <span class="ci-shape"></span>
                                     </div>
                                     <div
-                                        id="ccb-card-2"
-                                        class="ccb-ele nav-item nav-link"
-                                        onclick="handleSectionCardChangeButtonEvent(this)"
+                                        id="ci-card-2"
+                                        class="ci-ele d-flex align-items-center justify-content-center"
+                                        onclick="handleSectionCardIndicatorEvent(this)"
                                     >
-                                        <span class="ccb-content">Graduate</span>
-                                        <span class="ccb-icon">></span>
+                                        <span class="ci-shape"></span>
                                     </div>
                                     <div
-                                        id="ccb-card-3"
-                                        class="ccb-ele nav-item nav-link"
-                                        onclick="handleSectionCardChangeButtonEvent(this)"
+                                        id="ci-card-3"
+                                        class="ci-ele d-flex align-items-center justify-content-center"
+                                        onclick="handleSectionCardIndicatorEvent(this)"
                                     >
-                                        <span class="ccb-content">Technical Skills</span>
+                                        <span class="ci-shape"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-navigation d-flex align-items-center justify-content-center">
-                            <div class="card-indicators d-flex flex-column">
-                                <div
-                                    id="ci-card-0"
-                                    class="ci-ele active-card-ind d-flex align-items-center justify-content-center"
-                                    onclick="handleSectionCardIndicatorEvent(this)"
+                        <div class="section-card-change d-flex align-items-center justify-content-center">
+                            <span class="card-change-icon">
+                                <svg
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 1.5rem 1.5rem"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <span class="ci-shape"></span>
+                                    <circle cx="0.75rem" cy="0.75rem" r="0.75rem" />
+                                </svg>
+                            </span>
+                            <div class="card-change-buttons d-inline-flex align-items-center">
+                                <div
+                                    id="ccb-card-0"
+                                    class="ccb-ele nav-item nav-link active-card-change-button"
+                                    onclick="handleSectionCardChangeButtonEvent(this)"
+                                >
+                                    <span class="ccb-content">About</span>
+                                    <span class="ccb-icon">></span>
                                 </div>
                                 <div
-                                    id="ci-card-1"
-                                    class="ci-ele d-flex align-items-center justify-content-center"
-                                    onclick="handleSectionCardIndicatorEvent(this)"
+                                    id="ccb-card-1"
+                                    class="ccb-ele nav-item nav-link"
+                                    onclick="handleSectionCardChangeButtonEvent(this)"
                                 >
-                                    <span class="ci-shape"></span>
+                                    <span class="ccb-content">Under-Graduate</span>
+                                    <span class="ccb-icon">></span>
                                 </div>
                                 <div
-                                    id="ci-card-2"
-                                    class="ci-ele d-flex align-items-center justify-content-center"
-                                    onclick="handleSectionCardIndicatorEvent(this)"
+                                    id="ccb-card-2"
+                                    class="ccb-ele nav-item nav-link"
+                                    onclick="handleSectionCardChangeButtonEvent(this)"
                                 >
-                                    <span class="ci-shape"></span>
+                                    <span class="ccb-content">Graduate</span>
+                                    <span class="ccb-icon">></span>
                                 </div>
                                 <div
-                                    id="ci-card-3"
-                                    class="ci-ele d-flex align-items-center justify-content-center"
-                                    onclick="handleSectionCardIndicatorEvent(this)"
+                                    id="ccb-card-3"
+                                    class="ccb-ele nav-item nav-link"
+                                    onclick="handleSectionCardChangeButtonEvent(this)"
                                 >
-                                    <span class="ci-shape"></span>
+                                    <span class="ccb-content">Technical Skills</span>
                                 </div>
                             </div>
                         </div>
