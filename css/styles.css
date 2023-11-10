@@ -1,4 +1,4 @@
-/* Genaral Styles */
+/* General Styles */
 
 body {
     background-color: #040d12;
@@ -7,6 +7,8 @@ body {
     color: white;
     height: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -27,9 +29,8 @@ body {
 #content-frame {
     /* border: 1px green solid; */
     height: 75vh;
-    /* overflow: hidden; */
-    /* position: relative; */
-    scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
 }
 
 #content-frame section {
@@ -38,7 +39,7 @@ body {
     width: 100vw;
     min-width: 100vw;
     height: 100%;
-    /* transition: right 0.5s; */
+    scroll-snap-align: start;
 }
 
 .frame.footer-frame {
@@ -49,10 +50,6 @@ body {
 .section-container {
     height: 100%;
 }
-
-/* .section-content {
-    padding: 80px;
-} */
 
 /* Navbar */
 
@@ -149,7 +146,7 @@ body {
 /* Home */
 
 .home-content {
-    padding: 50px;
+    padding: 6rem 3rem;
 }
 
 .home-content:hover {
@@ -218,9 +215,11 @@ body {
     text-justify: distribute;
 }
 
-.about-card-container {
+.section-card-container {
     height: 100%;
     width: 90%;
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
 }
 
 .card-navigation {
@@ -228,20 +227,23 @@ body {
     width: 10%;
 }
 
-.about-cards {
+.section-cards {
     width: 100%;
     height: 90%;
     overflow: hidden;
 }
 
-.about-card-change {
+.section-card-change {
     width: 100%;
     height: 10%;
+    font-size: 2rem;
 }
 
-.about-card {
+.section-card {
+    display: block;
     width: 100%;
     height: 100%;
+    scroll-snap-align: start;
 }
 
 .card-content {
@@ -254,47 +256,77 @@ body {
     font-family: "WindSong", cursive;
 }
 
-.card-indicators {
-    list-style: none;
+.card-body {
+    font-size: 20px;
 }
 
-.card-indicators {
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+.ci-ele {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5rem;
+    background-color: transparent;
     cursor: pointer;
-    opacity: 0.3;
-    transition: opacity 0.5s ease;
 }
 
-.card-indicators span {
+.ci-shape {
     display: block;
     width: 10px;
     height: 10px;
-    margin-bottom: 5rem;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease;
 }
 
-.card-indicators span:last-child {
+.ci-ele:last-child {
     margin-bottom: 0;
 }
 
-.ci-ele:hover {
+.ci-ele:hover > .ci-shape {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.ci-ele.selected {
+.ci-ele.active-card-ind > .ci-shape {
     background-color: rgba(255, 255, 255, 1);
+}
+
+.card-change-icon > svg > circle {
+    fill: rgba(255, 255, 255, 0.3);
+    transition: fill 0.5s ease;
+}
+
+.section-card-change:hover > .card-change-icon > svg > circle {
+    fill: rgba(255, 255, 255, 1);
+}
+
+.card-change-buttons {
+}
+
+.ccb-ele {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.3);
+    transition: color 0.5s ease;
+}
+
+.ccb-ele:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.ccb-ele.active-card-change-button {
+    color: rgba(255, 255, 255, 1);
+}
+
+.ccb-icon {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-left: 1rem;
 }
 
 /* footer */
-
-div.footer {
-    background-color: yellow;
-}
 
 /* page indicator */
 
@@ -311,18 +343,18 @@ nav.indicators ul {
 nav.indicators ul li {
     display: inline-block;
     width: 100px;
+    height: 20px;
     margin: 0 10px;
     cursor: pointer;
-    padding: 5px 0;
     position: relative;
-    opacity: 0.3;
-    transition: opacity 0.5s ease;
+    background-color: transparent;
 }
 
-nav.indicators ul li span {
+.indicator-shape {
     position: absolute;
     left: 0;
     right: 0;
+    top: 50%;
     width: 100px;
     height: 3px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -330,16 +362,15 @@ nav.indicators ul li span {
     transition: background-color 0.5s ease;
 }
 
-.transition li:hover span {
+nav.indicators ul li:hover > .indicator-shape {
     background-color: rgba(255, 255, 255, 1);
 }
 
-nav.indicators > ul > .selected span {
+nav.indicators > ul > .active-main-ind .indicator-shape {
     background-color: rgba(255, 255, 255, 1);
 }
 
 #footer-row {
-    background-color: #3282b8;
     height: 100px;
     margin: 0;
     padding: 0;

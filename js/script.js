@@ -1,46 +1,115 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    // Navbar Elements
+// Active Class Variables
+
+let ACTIVE_SECTION = "active-section";
+let ACTIVE_NAVBAR = "active";
+let ACTIVE_MAIN_NAV_IND = "active-main-ind";
+let ACTIVE_CARD_NAV_IND = "active-card-ind";
+let ACTIVE_CARD_CHANGE_BUTTON = "active-card-change-button";
+let ACTIVE_SECTION_CARD = "active-section-card";
+
+// Navbar Elements
+let navbarElementArray = [];
+let indicatorElementArray = [];
+let contentFrameArray = [];
+
+document.addEventListener("DOMContentLoaded", () => {
     let navbar = document.getElementById("main-navbar");
-    let navbarElementArray = navbar.getElementsByTagName("li");
+    navbarElementArray = navbar.getElementsByTagName("li");
 
     // Indicator Elements
     let indicator = document.getElementById("indicator");
-    let indicatorElementArray = indicator.getElementsByTagName("li");
+    indicatorElementArray = indicator.getElementsByTagName("li");
 
     // Section Elements
     let contentFrame = document.getElementById("content-frame");
-    let contentFrameArray = contentFrame.getElementsByTagName("section");
+    contentFrameArray = contentFrame.getElementsByTagName("section");
 
-    for (let i = 0; i < contentFrameArray.length; i++) {
-        navbarElementArray[i].addEventListener("click", function () {
-            // Navbar Elements
-            cleanNavigationElement(navbarElementArray, "active");
-            cleanNavigationElement(contentFrameArray, "current-displayed-class");
-
-            this.classList.add("active");
-            let currSectionSelector = scrollToDesiredSection(this, "Navbar Link");
-            console.log(currSectionSelector);
-            // Make indicator active
-            makeNavigationElementActive(indicatorElementArray, currSectionSelector, "selected");
-        });
-
-        indicatorElementArray[i].addEventListener("click", function () {
-            // Indicator Elements
-            cleanNavigationElement(indicatorElementArray, "selected");
-            cleanNavigationElement(contentFrameArray, "current-displayed-class");
-
-            this.classList.add("selected");
-            let currSectionSelector = scrollToDesiredSection(this, "Section Indicator");
-
-            // Make Nav Item Active
-            makeNavigationElementActive(navbarElementArray, currSectionSelector, "active");
-        });
+    let currentSelectedSectionByClass = getCurrentlyActiveSection();
+    if (currentSelectedSectionByClass) {
+        currentSelectedSectionByClass.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    let currentlyDisplayedSection = getCurrentlyActiveSection();
+    let currentSectionSelector = "#" + currentSelectedSectionByClass.getAttribute("id");
+    reflectActiveClassOnSectionNavigation(navbarElementArray, currentSectionSelector, ACTIVE_NAVBAR);
+    reflectActiveClassOnSectionNavigation(indicatorElementArray, currentSectionSelector, ACTIVE_MAIN_NAV_IND);
 });
 
-function makeNavigationElementActive(elementArray, currentSectionSelector, className) {
+// Event Handlers
+
+function handleMainNavIndicatorEvent(clickedElement) {
+    // Cleanup
+    removeClassFromAll(indicatorElementArray, ACTIVE_MAIN_NAV_IND);
+    removeClassFromAll(contentFrameArray, ACTIVE_SECTION);
+
+    // scroll to the desired element
+    let currSectionSelector = scrollToDesiredSection(clickedElement);
+    console.log(currSectionSelector);
+
+    // Add the active classes
+    reflectActiveClassOnSectionNavigation(navbarElementArray, currSectionSelector, ACTIVE_NAVBAR);
+    clickedElement.classList.add(ACTIVE_MAIN_NAV_IND);
+}
+
+function handleNavbarLinkEvent(clickedElement) {
+    // Cleanup
+    removeClassFromAll(navbarElementArray, ACTIVE_NAVBAR);
+    removeClassFromAll(contentFrameArray, ACTIVE_SECTION);
+
+    // scroll to the desired element
+    let currSectionSelector = scrollToDesiredSection(clickedElement);
+
+    // Add the active classes
+    reflectActiveClassOnSectionNavigation(indicatorElementArray, currSectionSelector, ACTIVE_MAIN_NAV_IND);
+    clickedElement.classList.add(ACTIVE_NAVBAR);
+}
+
+function handleSectionCardIndicatorEvent(clickedElement) {
+    let currentSection = getCurrentlyActiveSection();
+    let cardNavElementArray = getSectionCardIndicatorArray(currentSection);
+    let cardChangeButtonArray = getSectionChangeButtonArray(currentSection);
+    let cardsArray = getSectionCardsArray(currentSection);
+
+    // clean up
+    removeClassFromAll(cardNavElementArray, ACTIVE_CARD_NAV_IND);
+    removeClassFromAll(cardChangeButtonArray, ACTIVE_CARD_CHANGE_BUTTON);
+    removeClassFromAll(cardsArray, ACTIVE_SECTION_CARD);
+
+    let cardIndex = getCardIndex(clickedElement);
+
+    let showThisCard = cardsArray[cardIndex];
+    if (showThisCard) {
+        showThisCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    clickedElement.classList.add(ACTIVE_CARD_NAV_IND);
+    reflectActiveClassOnCardNavigation(cardChangeButtonArray, cardIndex, ACTIVE_CARD_CHANGE_BUTTON);
+}
+
+function handleSectionCardChangeButtonEvent(clickedElement) {
+    let currentSection = getCurrentlyActiveSection();
+    let cardNavElementArray = getSectionCardIndicatorArray(currentSection);
+    let cardChangeButtonArray = getSectionChangeButtonArray(currentSection);
+    let cardsArray = getSectionCardsArray(currentSection);
+
+    // clean up
+    removeClassFromAll(cardNavElementArray, ACTIVE_CARD_NAV_IND);
+    removeClassFromAll(cardChangeButtonArray, ACTIVE_CARD_CHANGE_BUTTON);
+    removeClassFromAll(cardsArray, ACTIVE_SECTION_CARD);
+
+    let cardIndex = getCardIndex(clickedElement);
+
+    let showThisCard = cardsArray[cardIndex];
+    if (showThisCard) {
+        showThisCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    clickedElement.classList.add(ACTIVE_CARD_CHANGE_BUTTON);
+    reflectActiveClassOnCardNavigation(cardNavElementArray, cardIndex, ACTIVE_CARD_NAV_IND);
+}
+
+// Utility Functions
+
+function reflectActiveClassOnSectionNavigation(elementArray, currentSectionSelector, className) {
     for (let i = 0; i < elementArray.length; i++) {
         if (elementArray[i].getAttribute("data-selection") === currentSectionSelector) {
             elementArray[i].classList.add(className);
@@ -50,23 +119,75 @@ function makeNavigationElementActive(elementArray, currentSectionSelector, class
     }
 }
 
-function cleanNavigationElement(elementArray, className) {
+function reflectActiveClassOnCardNavigation(elementArray, currentCardIndex, className) {
+    let id0 = elementArray[0].getAttribute("id");
+    let attributeSuffix = id0.slice(0, id0.length - 1);
+    console.log(attributeSuffix);
+    for (let i = 0; i < elementArray.length; i++) {
+        if (elementArray[i].getAttribute("id") === attributeSuffix + currentCardIndex) {
+            elementArray[i].classList.add(className);
+        } else {
+            elementArray[i].classList.remove(className);
+        }
+    }
+}
+
+function removeClassFromAll(elementArray, className) {
     for (let i = 0; i < elementArray.length; i++) {
         elementArray[i].classList.remove(className);
     }
 }
 
-function scrollToDesiredSection(currentNavElement, type) {
-    let sectionSelector = currentNavElement.getAttribute("data-selection");
+function scrollToDesiredSection(clickedElement) {
+    let sectionSelector = clickedElement.getAttribute("data-selection");
     let sectionToShow = document.querySelector(sectionSelector);
-    console.log("Going to - " + sectionSelector + " using " + type);
+    console.log("Going to - " + sectionSelector);
     if (sectionToShow) {
         sectionToShow.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    sectionToShow.classList.add("current-displayed-class");
+    sectionToShow.classList.add(ACTIVE_SECTION);
     return sectionSelector;
 }
 
-function getCurrentlyActiveSection(contentFrameArray) {
-    return document.querySelector("current-displayed-class");
+function getCurrentlyActiveSection() {
+    return document.querySelector("." + ACTIVE_SECTION);
+}
+
+function getCurrentCardNavigation() {
+    let currentlyDisplayedSection = getCurrentlyActiveSection();
+    let cardNavigation = currentlyDisplayedSection.querySelector(".card-indicators");
+    console.log("Executing Card Navigation!");
+    return cardNavigation;
+}
+
+function getSectionCardsArray(activeSection) {
+    return activeSection.getElementsByClassName("section-card");
+}
+
+function getSectionCardIndicatorArray(activeSection) {
+    return activeSection.getElementsByClassName("ci-ele");
+}
+
+function getSectionChangeButtonArray(activeSection) {
+    return activeSection.getElementsByClassName("ccb-ele");
+}
+
+function getSiblings(element) {
+    var siblings = [];
+    var sibling = element.parentNode.firstChild;
+
+    // Loop through each sibling and collect
+    while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== element) {
+            siblings.push(sibling);
+        }
+        sibling = sibling.nextSibling;
+    }
+
+    return siblings;
+}
+
+function getCardIndex(clickedElement) {
+    let cardIndexStr = clickedElement.getAttribute("id");
+    return parseInt(cardIndexStr.charAt(cardIndexStr.length - 1));
 }
