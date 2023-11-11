@@ -209,8 +209,8 @@ body {
 /* about */
 
 .about-content {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
 }
 
 /* .about-content:hover {
@@ -218,33 +218,30 @@ body {
 } */
 
 .section-card-container {
-    height: 100%;
+    height: 90%;
     width: 100%;
     scroll-snap-type: y mandatory;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.card-navigation {
-    height: 100%;
-    width: 5%;
-}
-
-.section-cards {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 
 .section-card-change {
     width: 100%;
     height: 10%;
-    font-size: 1.5rem;
-    margin-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section-cards {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-navigation {
+    width: 10%;
+    height: 100%;
 }
 
 .section-card {
-    display: block;
     width: 100%;
     height: 100%;
     scroll-snap-align: start;
@@ -252,25 +249,25 @@ body {
 
 .card-content {
     height: 100%;
-    padding: 30px;
+    padding: 40px;
 }
 
 .card-header {
+    height: 20%;
     font-size: 4rem;
     font-family: "WindSong", cursive;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .card-body {
-    font-size: 20px;
+    height: 80%;
 }
 
 .ci-ele {
     display: block;
     width: 30px;
     height: 30px;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     background-color: transparent;
     cursor: pointer;
 }
@@ -305,9 +302,6 @@ body {
     fill: rgba(255, 255, 255, 1);
 }
 
-.card-change-buttons {
-}
-
 .ccb-ele {
     display: flex;
     align-items: center;
@@ -330,6 +324,36 @@ body {
     font-size: 2.3rem;
     font-weight: bold;
     margin-left: 1rem;
+}
+
+ul.card-list {
+    font-size: 1.5rem;
+    list-style: square;
+    color: rgba(255, 255, 255, 0.5);
+}
+ul.card-list > li {
+    padding-left: 1.5rem;
+}
+
+b.important-info {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
+}
+
+table.card-table {
+    width: 100%;
+    height: 100%;
+}
+
+table.card-table tr {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+table.card-table td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 1rem;
 }
 
 /* footer */
