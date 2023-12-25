@@ -186,6 +186,7 @@ body {
     margin-right: 0;
     letter-spacing: 2px;
     line-height: -20px;
+    color: grey;
 }
 
 .home-text-2 {
@@ -195,11 +196,22 @@ body {
     margin-left: 80px;
     margin-right: 0;
     letter-spacing: 10px;
+    color: grey;
 }
 
 .home-text-3 {
     font-size: 13rem;
     margin: 0;
+}
+
+.home-text-4 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-top: -30px;
+    margin-bottom: 0;
+    margin-left: 390px;
+    margin-right: 0;
+    color: grey;
 }
 
 .home-text-3::first-letter {
@@ -378,6 +390,12 @@ table.card-table td {
     column-count: 3;
     column-gap: 2rem;
     /* margin: 0 auto; */
+}
+
+/* work */
+
+.work-text-container {
+
 }
 
 /* footer */

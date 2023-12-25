@@ -111,16 +111,17 @@
         <div id="content-frame" class="d-flex flex-nowrap">
             <!-- Home Section -->
 
-            <section id="home" class="x">
+            <section id="home" class="active-section">
                 <!-- <div class="home"><h1>Home</h1></div> -->
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
                     <div class="section-content home-content d-inline-flex align-items-center justify-content-center">
                         <div class="home-text-container ms-2 me-5">
                             <div class="home-inner-text-container d-flex flex-column align-content-center">
-                                <h6 class="home-text-1">Hey There!</h6>
+                                <p class="home-text-1">Hey There!</p>
                                 <br />
-                                <h1 class="home-text-2">I'm</h1>
-                                <h1 class="home-text-3 justify-content-center">Aditya!</h1>
+                                <p class="home-text-2">I'm</p>
+                                <p class="home-text-3 justify-content-center">Aditya!</p>
+                                <p class="home-text-4">Welcome to my page...</p>
                             </div>
                         </div>
                         <div class="home-image-container ms-5 me-2 fading-border">
@@ -136,9 +137,9 @@
             </section>
 
             <!-- About Section -->
-            <section id="about" class="active-section">
+            <section id="about">
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="section-content about-content about-content d-flex flex-column">
+                    <div class="section-content about-content d-flex flex-column">
                         <div class="section-card-container d-flex">
                             <div class="section-cards">
                                 <div class="section-card active-section-card">
@@ -327,13 +328,101 @@
             </section>
 
             <!-- Work Section -->
+
             <section id="work">
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="section-content d-inline-flex align-items-center justify-content-center">
-                        <h1>Work</h1>
+                    <div class="section-content home-content d-inline-flex align-items-center justify-content-center">
+                        <div class="work-text-container ms-2 me-5">
+                            <h1>Software Developer</h1>
+                            <h2>Hansen Technologies, Pune, MH, India</h2>
+                            <h2>Started : August 1st, 2018</h2>
+                            <h2>Ended : November 30th, 2022</h2>
+                            <h2>Duration: 4 Years, 4 Months</h2>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <!-- <section id="work">
+                <div class="section-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="section-content d-inline-flex align-items-center justify-content-center">
+                        <div class="section-content about-content d-flex flex-column">
+                        <div class="section-card-container d-flex">
+                            <div class="section-cards">
+                                <div class="section-card">
+                                    <div class="card-content">
+                                        <div class="card-header"></div>
+                                        <div class="card-body">
+                                            <div>
+                                                <h1><b>Bachelor Of Engineering (Computer Engineering)</b></h1>
+                                                <h4>Savitribai Phule Pune University, Pune, MH, India</h4>
+                                                <h4>August 2014 - June 2018</h4>
+                                                <h4>Courses :</h4>
+                                                <div class="two-column-list">
+                                                    <ul>
+                                                        <li>Discrete Structures</li>
+                                                        <li>Data Structures and Problem Solving</li>
+                                                        <li>Design and Analysis of Algorithms</li>
+                                                        <li>Operating Systems and Administration</li>
+                                                        <li>Object-Oriented and Multi-core Programming</li>
+                                                        <li>Computer Graphics and Gaming</li>
+                                                        <li>Problem Solving with Gamification</li>
+                                                        <li>Computer Organization</li>
+                                                        <li>Theory of Computation</li>
+                                                        <li>Database Management and System Applications</li>
+                                                        <li>Software Engineering</li>
+                                                        <li>Software designing Methodologies</li>
+                                                        <li>Cloud Computing</li>
+                                                        <li>Computer Forensics and Cybersecurity</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-navigation d-flex align-items-center justify-content-center">
+                                <div class="card-indicators d-flex flex-column">
+                                    <div
+                                        id="ci-card-0"
+                                        class="ci-ele active-card-ind d-flex align-items-center justify-content-center"
+                                        onclick="handleSectionCardIndicatorEvent(this)"
+                                    >
+                                        <span class="ci-shape"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card-change d-flex align-items-center justify-content-center">
+                            <span class="card-change-icon">
+                                <svg
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 1.5rem 1.5rem"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <circle cx="0.75rem" cy="0.75rem" r="0.75rem" />
+                                </svg>
+                            </span>
+                            <div class="card-change-buttons d-inline-flex align-items-center">
+                                <div
+                                    id="ccb-card-0"
+                                    class="ccb-ele nav-item nav-link active-card-change-button"
+                                    onclick="handleSectionCardChangeButtonEvent(this)"
+                                >
+                                    <span class="ccb-content me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-1-circle" viewBox="0 0 16 16">
+                                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="ccb-icon">></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section> -->
 
             <!-- Projects Section -->
             <section id="projects">
