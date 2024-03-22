@@ -191,3 +191,11 @@ function getCardIndex(clickedElement) {
     let cardIndexStr = clickedElement.getAttribute("id");
     return parseInt(cardIndexStr.charAt(cardIndexStr.length - 1));
 }
+
+// Project Card Navigation
+
+let ACTIVE_PROJECT_CARD = "active-project-card";
+
+function handleProjectCardChangeEvent(clickedElement) {
+    console.log("Project Card Nav Clicked!!");
+}

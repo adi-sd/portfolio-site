@@ -525,7 +525,19 @@ table.card-table td {
 }
 
 .pcnav-button {
+    width: 100%;
+}
+
+.pcnav-icon {
     width: 25%;
+}
+
+.pcnav-icon > svg {
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.pcnav-icon > svg:hover {
+    fill: rgba(255, 255, 255, 1);
 }
 
 /* contact */
