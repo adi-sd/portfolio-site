@@ -111,7 +111,7 @@
         <div id="content-frame" class="d-flex flex-nowrap">
             <!-- Home Section -->
 
-            <section id="home" class="active-section">
+            <section id="home">
                 <!-- <div class="home"><h1>Home</h1></div> -->
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
                     <div class="section-content home-content d-inline-flex align-items-center justify-content-center">
@@ -366,17 +366,17 @@
             </section>
 
             <!-- Projects Section -->
-            <section id="projects">
+            <section id="projects" class="active-section">
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="section-content project-content d-inline-flex align-items-center justify-items-center justify-content-center">
+                    <div class="section-content project-section-content">
                         <div class="project-cards">
-                            <div class="project-card active-project-card">
+                            <div class="project-card d-flex active-project-card">
                                 <div class="project-card-content">
                                     <div class="project-card-header">
                                         <div class="project-date">September 2023</div>
-                                    </div>
-                                    <div class="project-card-facts">
                                         <div class="project-title">EBay Window-Shopping App 1</div>
+                                    </div>
+                                    <div class="project-card-facts">
                                         <div class="project-tech-header">Technologies:-</div>
                                         <div class="project-tech-body">Node.js, Angular, Swift, MongoDB, Google Cloud</div>
                                     </div>
@@ -391,14 +391,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="project-card-navigation">
+                                    <div class="pcnav-main d-flex flex-column justify-content-between">
+                                        <div class="pcnav-number">
+                                            1
+                                        </div>
+                                        <div class="pcnav-button d-flex justify-content-center">
+                                            <div class="pcnav-icon" onclick="handleProjectCardChangeEvent(this)">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-card active-project-card">
+                            <div class="project-card d-flex active-project-card">
                                 <div class="project-card-content">
                                     <div class="project-card-header">
                                         <div class="project-date">September 2023</div>
+                                        <div class="project-title">EBay Window-Shopping App 2</div>
                                     </div>
                                     <div class="project-card-facts">
-                                        <div class="project-title">EBay Window-Shopping App 2</div>
                                         <div class="project-tech-header">Technologies:-</div>
                                         <div class="project-tech-body">Node.js, Angular, Swift, MongoDB, Google Cloud</div>
                                     </div>
@@ -413,16 +425,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="project-card-navigation">
-                            <div class="pcnav-main d-flex flex-column justify-content-between">
-                                <div class="pcnav-number">
-                                    1
-                                </div>
-                                <div class="pcnav-button d-flex justify-content-center">
-                                    <div class="pcnav-icon" onclick="handleProjectCardChangeEvent(this)">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                                <div class="project-card-navigation">
+                                    <div class="pcnav-main d-flex flex-column justify-content-between">
+                                        <div class="pcnav-number">
+                                            1
+                                        </div>
+                                        <div class="pcnav-button d-flex justify-content-center">
+                                            <div class="pcnav-icon" onclick="handleProjectCardChangeEvent(this)">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
