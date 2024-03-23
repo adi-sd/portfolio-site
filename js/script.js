@@ -196,6 +196,46 @@ function getCardIndex(clickedElement) {
 
 let ACTIVE_PROJECT_CARD = "active-project-card";
 
-function handleProjectCardChangeEvent(clickedElement) {
-    console.log("Project Card Nav Clicked!!");
+let projectCards = [];
+
+function getAllProjectCards() {
+    return document.getElementsByClassName("project-card");
+}
+
+function getCurrentActiveCardIndex() {
+    let currentActiveProjectElement = document.getElementsByClassName(ACTIVE_PROJECT_CARD)[0];
+    let currentProjectIdStr = currentActiveProjectElement.getAttribute("data-selection").slice("#project".length);
+    let currentProjectId = parseInt(currentProjectIdStr);
+    // console.log("Current Project - " + currentProjectId);
+    return currentProjectId - 1;
+}
+
+function handleProjectCardUpEvent() {
+    // console.log("Project Card Up Clicked!!");
+    projectCards = getAllProjectCards();
+    let activeProjectCardId = getCurrentActiveCardIndex();
+    let reqProjectCardId = activeProjectCardId - 1;
+    if (reqProjectCardId < 0) {
+        // Invalid Id
+    } else {
+        projectCards[activeProjectCardId].classList.remove(ACTIVE_PROJECT_CARD);
+        let reqProjectCardElement = projectCards[reqProjectCardId];
+        reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD);
+        reqProjectCardElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}
+
+function handleProjectCardDownEvent() {
+    // console.log("Project Card Down Clicked!!");
+    projectCards = getAllProjectCards();
+    let activeProjectCardId = getCurrentActiveCardIndex();
+    let reqProjectCardId = activeProjectCardId + 1;
+    if (reqProjectCardId >= projectCards.length) {
+        // Invalid Id
+    } else {
+        projectCards[activeProjectCardId].classList.remove(ACTIVE_PROJECT_CARD);
+        let reqProjectCardElement = projectCards[reqProjectCardId];
+        reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD);
+        reqProjectCardElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
 }

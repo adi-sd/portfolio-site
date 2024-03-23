@@ -445,23 +445,18 @@ table.card-table td {
 
 .project-cards {
     height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-.project-card {
-    height: 100%;
-    width: 100%;
-}
-
-.project-card-content {
-    height: 100%;
     width: 90%;
+    overflow: hidden;
 }
 
 .project-card-navigation {
     height: 100%;
     width: 10%;
+}
+
+.project-card {
+    height: 100%;
+    width: 100%;
 }
 
 .project-card-header {
@@ -536,7 +531,7 @@ table.card-table td {
 }
 
 .pcnav-icon {
-    width: 25%;
+    width: 20%;
 }
 
 .pcnav-icon > svg {
