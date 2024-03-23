@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSectionSelector = "#" + currentSelectedSectionByClass.getAttribute("id");
     reflectActiveClassOnSectionNavigation(navbarElementArray, currentSectionSelector, ACTIVE_NAVBAR);
     reflectActiveClassOnSectionNavigation(indicatorElementArray, currentSectionSelector, ACTIVE_MAIN_NAV_IND);
+
+    if (document.getElementsByClassName("pcnav-number")[0]) {
+        setCurrentProjectNumber();
+    }
 });
 
 // Event Handlers
@@ -197,6 +201,7 @@ function getCardIndex(clickedElement) {
 let ACTIVE_PROJECT_CARD = "active-project-card";
 
 let projectCards = [];
+let projectNumberElement = document.getElementsByClassName("pcnav-number")[0];
 
 function getAllProjectCards() {
     return document.getElementsByClassName("project-card");
@@ -222,6 +227,7 @@ function handleProjectCardUpEvent() {
         let reqProjectCardElement = projectCards[reqProjectCardId];
         reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD);
         reqProjectCardElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        changeProjectCardNumber(reqProjectCardId + 1, projectCards.length);
     }
 }
 
@@ -237,5 +243,17 @@ function handleProjectCardDownEvent() {
         let reqProjectCardElement = projectCards[reqProjectCardId];
         reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD);
         reqProjectCardElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        changeProjectCardNumber(reqProjectCardId + 1, projectCards.length);
     }
+}
+
+function changeProjectCardNumber(reqProjectNumber, totalProjects) {
+    let projectNumberElement = document.getElementsByClassName("pcnav-number")[0];
+    projectNumberElement.textContent = reqProjectNumber + "/" + totalProjects;
+}
+
+function setCurrentProjectNumber() {
+    let projectNumberElement = document.getElementsByClassName("pcnav-number")[0];
+    projectCards = getAllProjectCards();
+    projectNumberElement.textContent = 1 + "/" + projectCards.length;
 }
