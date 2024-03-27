@@ -264,6 +264,10 @@ function closeOverlay() {
         projectCardOverlay.style.opacity = "0";
     }, 10);
     document.querySelector(".project-info-card-container").style.display = "none";
+    let projectInfoCardArray = document.getElementsByClassName("project-info-card");
+    for (let i = 0; i < projectInfoCardArray.length; i++) {
+        projectInfoCardArray[i].style.display = "none";
+    }
 }
 
 function showProjectInfo(currentProjectCard) {
