@@ -257,3 +257,31 @@ function setCurrentProjectNumber() {
     projectCards = getAllProjectCards();
     projectNumberElement.textContent = 1 + "/" + projectCards.length;
 }
+
+function closeOverlay() {
+    let projectCardOverlay = document.getElementsByClassName("project-info-card-overlay")[0];
+    setTimeout(function () {
+        projectCardOverlay.style.opacity = "0";
+    }, 10);
+    document.querySelector(".project-info-card-container").style.display = "none";
+}
+
+function showProjectInfo(currentProjectCard) {
+    let projectName = currentProjectCard.getAttribute("data-selection");
+    console.log("Clicked! - " + projectName);
+    let projectInfoCardContainer = document.getElementsByClassName("project-info-card-container")[0];
+    projectInfoCardContainer.style.display = "block";
+
+    let projectCardOverlay = document.getElementsByClassName("project-info-card-overlay")[0];
+    setTimeout(function () {
+        projectCardOverlay.style.opacity = "1";
+    }, 10);
+
+    let projectInfoCardArray = document.getElementsByClassName("project-info-card");
+    for (let i = 0; i < projectInfoCardArray.length; i++) {
+        if (projectInfoCardArray[i].getAttribute("data-selection") === projectName) {
+            projectInfoCardArray[i].style.display = "block";
+            break;
+        }
+    }
+}

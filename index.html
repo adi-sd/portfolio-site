@@ -411,7 +411,7 @@
             </section> -->
 
             <!-- Projects Section -->
-            <section id="projects">
+            <!-- <section id="projects">
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
                     <div class="section-content d-flex project-section-content">
                         <div class="project-cards">
@@ -487,7 +487,7 @@
                             <div class="pcnav-main d-flex flex-column justify-content-around">
                                 <div class="pcnav-button d-flex justify-content-center">
                                     <div class="pcnav-icon" onclick="handleProjectCardUpEvent()">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
                                     </div>
                                 </div>
                                 <div class="pcnav-number">
@@ -495,9 +495,135 @@
                                 </div>
                                 <div class="pcnav-button d-flex justify-content-center">
                                     <div class="pcnav-icon" onclick="handleProjectCardDownEvent()">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section id="projects">
+                <div class="section-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="section-content d-flex project-section-content">
+                        <div class="project-cards-2">
+                            <div class="container py-2">
+                                <div class="row" data-masonry='{"percentPosition": true }'>
+                                    <div class="col-sm-4 col-md-3 py-3">
+                                        <div class="card special-card">
+                                            <div data-selection="#project1" class="card-body" onclick="showProjectInfo(this)">
+                                                <h3 class="card-title">EBay Window-Shopping Application</h3>
+                                                <p class="card-text">Node.js, Angular, Swift, MongoDB, Google Cloud, eBay Open Source APIs</p>
+                                                <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 py-3">
+                                        <div class="card special-card">
+                                            <div data-selection="#project2" class="card-body" onclick="showProjectInfo(this)">
+                                                <h3 class="card-title">Video Library Search with Video Clip Query</h3>
+                                                <p class="card-text">Python, Numpy, CV2, PyQt</p>
+                                                <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 py-3">
+                                        <div class="card special-card">
+                                            <div data-selection="#project3" class="card-body" onclick="showProjectInfo(this)">
+                                                <h3 class="card-title">Object Detection from an RGB Image</h3>
+                                                <p class="card-text">Java, Maven, OpenCV</p>
+                                                <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-sm-4 col-md-3 py-3">
+                                        <div class="card special-card">
+                                            <div class="card-body">
+                                                <h3 class="card-title">Card</h3>
+                                                <p class="card-text">With supporting text.</p>
+                                                <a href="#" class="btn btn-outline-secondary">More Info</a>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info-card-container">
+                            <div class="project-info-card-overlay">
+
+                                <div data-selection="#project1" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-card-header">
+                                        <div class="project-date">November 2023</div>
+                                        <div class="project-title">eBay Window-Shopping Application</div>
+                                    </div>
+                                    <div class="project-card-facts">
+                                        <div class="project-tech-header">Technologies:-</div>
+                                        <div class="project-tech-body">Node.js, Angular, Swift, MongoDB, Google Cloud, eBay Open Source APIs</div>
+                                    </div>
+                                    <div class="project-card-description">
+                                        <div class="project-about-header">About:-</div>
+                                        <div class="project-about-body">
+                                            <ul>
+                                                <li>MEAN application, Angular and Swift IOS application frontend and Node.js and MongoDB (Atlas) backend</li>
+                                                <li>Google Cloud application engine deployment</li>
+                                                <li>Features - Product Search, Wishlist, Related Products, Text Search Autocomplete, Automatic Location reference</li>
+                                                <li>Search Filters - Price, Shipping, Location, Seller etc.</li>
+                                                <li>Individual efforts</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project2" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-card-header">
+                                        <div class="project-date">October 2023</div>
+                                        <div class="project-title">Video Library Search with Video Clip Query</div>
+                                    </div>
+                                    <div class="project-card-facts">
+                                        <div class="project-tech-header">Technologies:-</div>
+                                        <div class="project-tech-body">Python, Numpy, cv2, PyQt</div>
+                                    </div>
+                                    <div class="project-card-description">
+                                        <div class="project-about-header">About:-</div>
+                                        <div class="project-about-body">
+                                            <ul>
+                                                <li>Searching a video library using a video clip query</li>
+                                                <li>Preprocessing the video library ( around 30 videos, 640x480res,  20-25min) - shot boundaries, frame histogram calculation, and hashing</li>
+                                                <li>returning the exact frame and timestamp match in 200-300 milliseconds</li>
+                                                <li>Display the video player with video starting from the clip</li>
+                                                <li>Collaborative Group Efforts (3 People)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project3" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-card-header">
+                                        <div class="project-date">September 2023</div>
+                                        <div class="project-title">Object Detection from an RGB Image</div>
+                                    </div>
+                                    <div class="project-card-facts">
+                                        <div class="project-tech-header">Technologies:-</div>
+                                        <div class="project-tech-body">Java, Maven, OpenCV</div>
+                                    </div>
+                                    <div class="project-card-description">
+                                        <div class="project-about-header">About:-</div>
+                                        <div class="project-about-body">
+                                            <ul>
+                                                <li>Object detection system</li>
+                                                <li>Uses Color Histogram matching for a pre analyzed set of objects</li>
+                                                <li>Single and Multiple same and different objects with varying dimensions</li>
+                                                <li>96% accuracy with a reasonably tight bounding box</li>
+                                                <li>Individual efforts</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
