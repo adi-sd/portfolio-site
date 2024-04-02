@@ -500,9 +500,49 @@ table.card-table td {
 }
 
 .project-cards {
-    height: 100%;
+    height: 85%;
     width: 100%;
     overflow: hidden;
+}
+
+.project-page-navigation {
+    height: 15%;
+    width: 100%;
+}
+
+.pcnav-main {
+    height: 100%;
+    width: 100%;
+}
+
+.pcnav-button {
+    height: 100%;
+    width: 20%;
+}
+
+.pcnav-icon {
+    width: 30px;
+    height: 30px;
+    fill: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pcnav-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    fill: rgba(255, 255, 255, 1);
+}
+
+.pcnav-number {
+    height: 100%;
+    width: 10%;
+}
+
+.project-cards-container-page {
+    height: 100%;
+    width: 100%;
 }
 
 .project-grid-container {
@@ -510,7 +550,7 @@ table.card-table td {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .special-card {
@@ -521,8 +561,7 @@ table.card-table td {
     cursor: pointer;
     display: flex;
     margin: 5%;
-    height: 80%;
-    min-height: fit-content;
+    height: 200px;
 }
 
 .special-card:hover {
@@ -562,24 +601,6 @@ table.card-table td {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #040d12;
     display: none;
-}
-
-.pi-close-button {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    cursor: pointer;
-}
-
-.pi-close-button:hover {
-    transform: scale(1.5);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.project-card-navigation {
-    height: 100%;
-    width: 10%;
 }
 
 .project-card {

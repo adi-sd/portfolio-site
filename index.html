@@ -506,59 +506,91 @@
 
             <section id="projects">
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="section-content d-flex project-section-content">
+                    <div class="section-content d-flex flex-column align-items-center project-section-content">
                         <div class="project-cards">
-                            <div class="project-grid-container">
+                            <div class="project-cards-container-page">
+                                <div class="project-grid-container">
 
-                                <div class="card special-card" id="project1">
-                                    <div data-selection="#project1" class="card-body" onclick="showProjectInfo(this)">
-                                        <h3 class="card-title">EBay Window-Shopping Application</h3>
-                                        <p class="card-text">Node.js, Angular, Swift, MongoDB, Google Cloud, eBay Open Source APIs</p>
-                                        <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                    <div class="card special-card" id="project1">
+                                        <div data-selection="#project1" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">EBay Window-Shopping Application</h3>
+                                            <p class="card-text">Node.js, Angular, Swift, MongoDB, Google Cloud, eBay Open Source APIs</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card special-card" id="project2">
+                                        <div data-selection="#project2" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Video Library Search with Video Clip Query</h3>
+                                            <p class="card-text">Python, Numpy, CV2, PyQt</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card special-card" id="project3">
+                                        <div data-selection="#project3" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Object Detection from an RGB Image</h3>
+                                            <p class="card-text">Java, Maven, OpenCV</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card special-card" id="project4">
+                                        <div data-selection="#project4" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Bulk Resume Shortlisting</h3>
+                                            <p class="card-text">Angular, Python Flask, HTML, CSS and Typescript</p>
+                                            <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card special-card" id="project5">
+                                        <div data-selection="#project5" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">OSS External System Simulator</h3>
+                                            <p class="card-text">Java, Restful APIs, Apache HTTP Library, XML, JSON</p>
+                                            <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card special-card" id="project6">
+                                        <div data-selection="#project6" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Cyber Forensic framework for PaaS Cloud Service Providers</h3>
+                                            <p class="card-text">Java, Shell Scripts, Python, MongoDB, HTML, CSS</p>
+                                            <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="project-cards-container-page">
+                                <div class="project-grid-container">
+                                    
+                                    <div class="card special-card" id="project7">
+                                        <div data-selection="#project7" class="card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Portfolio Web Site</h3>
+                                            <p class="card-text">HTML5, CSS3, JavaScript, Bootstrap 5, Google Fonts, Font Awesome</p>
+                                            <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-page-navigation">
+                            <div class="pcnav-main d-flex align-items-center justify-content-center">
+                                <div class="pcnav-button d-flex flex-column align-items-center justify-content-center">
+                                    <div class="pcnav-icon" onclick="handleProjectCardUpEvent()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
                                     </div>
                                 </div>
-
-                                <div class="card special-card" id="project2">
-                                    <div data-selection="#project2" class="card-body" onclick="showProjectInfo(this)">
-                                        <h3 class="card-title">Video Library Search with Video Clip Query</h3>
-                                        <p class="card-text">Python, Numpy, CV2, PyQt</p>
-                                        <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
-                                    </div>
+                                <div class="pcnav-number d-flex flex-column align-items-center justify-content-center">
+                                    1
                                 </div>
-
-                                <div class="card special-card" id="project3">
-                                    <div data-selection="#project3" class="card-body" onclick="showProjectInfo(this)">
-                                        <h3 class="card-title">Object Detection from an RGB Image</h3>
-                                        <p class="card-text">Java, Maven, OpenCV</p>
-                                        <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
-                                    </div>
-                                </div>
-
-                                <div class="card special-card" id="project4">
-                                    <div data-selection="#project4" class="card-body" onclick="showProjectInfo(this)">
-                                        <h3 class="card-title">Bulk Resume Shortlisting</h3>
-                                        <p class="card-text">Angular, Python Flask, HTML, CSS and Typescript</p>
-                                        <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
-                                    </div>
-                                </div>
-
-                                <div class="card special-card" id="project5">
-                                    <div data-selection="#project5" class="card-body" onclick="showProjectInfo(this)">
-                                        <h3 class="card-title">OSS External System Simulator</h3>
-                                        <p class="card-text">Java, Restful APIs, Apache HTTP Library, XML, JSON</p>
-                                        <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
-                                    </div>
-                                </div>
-
-                                <div class="card special-card" id="project6">
-                                    <div data-selection="#project6" class="card-body" onclick="showProjectInfo(this)">
-                                        <h3 class="card-title">Cyber Forensic framework for PaaS Cloud Service Providers</h3>
-                                        <p class="card-text">Java, Shell Scripts, Python, MongoDB, HTML, CSS</p>
-                                        <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a>
+                                <div class="pcnav-button d-flex flex-column align-items-center justify-content-center">
+                                    <div class="pcnav-icon" onclick="handleProjectCardDownEvent()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="project-info-card-container">
                             <div class="project-info-card-overlay">
@@ -641,6 +673,10 @@
                                 </div>
 
                                 <div data-selection="#project6" class="project-info-card" onclick="closeOverlay()">
+                                    <h1>No Information Yet!</h1>
+                                </div>
+
+                                <div data-selection="#project7" class="project-info-card" onclick="closeOverlay()">
                                     <h1>No Information Yet!</h1>
                                 </div>
 
