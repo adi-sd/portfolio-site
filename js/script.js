@@ -198,64 +198,64 @@ function getCardIndex(clickedElement) {
 
 // Project Card Navigation
 
-let ACTIVE_PROJECT_CARD = "active-project-card";
+let ACTIVE_PROJECT_CARD_PAGE = "active-project-card-page";
 
-let projectCards = [];
+let projectCardPages = [];
 let projectNumberElement = document.getElementsByClassName("pcnav-number")[0];
 
-function getAllProjectCards() {
-    return document.getElementsByClassName("project-card");
+function getAllProjectCardPages() {
+    return document.getElementsByClassName("project-cards-container-page");
 }
 
 function getCurrentActiveCardIndex() {
-    let currentActiveProjectElement = document.getElementsByClassName(ACTIVE_PROJECT_CARD)[0];
-    let currentProjectIdStr = currentActiveProjectElement.getAttribute("data-selection").slice("#project".length);
-    let currentProjectId = parseInt(currentProjectIdStr);
+    let currentActiveProjectElement = document.getElementsByClassName(ACTIVE_PROJECT_CARD_PAGE)[0];
+    let currentProjectPageIdStr = currentActiveProjectElement.getAttribute("data-selection").slice("#page".length);
+    let currentProjectPageId = parseInt(currentProjectPageIdStr);
     // console.log("Current Project - " + currentProjectId);
-    return currentProjectId - 1;
+    return currentProjectPageId - 1;
 }
 
 function handleProjectCardUpEvent() {
     // console.log("Project Card Up Clicked!!");
-    projectCards = getAllProjectCards();
-    let activeProjectCardId = getCurrentActiveCardIndex();
-    let reqProjectCardId = activeProjectCardId - 1;
-    if (reqProjectCardId < 0) {
+    projectCardPages = getAllProjectCardPages();
+    let activeProjectCardPageId = getCurrentActiveCardIndex();
+    let reqProjectCardPageId = activeProjectCardPageId - 1;
+    if (reqProjectCardPageId < 0) {
         // Invalid Id
     } else {
-        projectCards[activeProjectCardId].classList.remove(ACTIVE_PROJECT_CARD);
-        let reqProjectCardElement = projectCards[reqProjectCardId];
-        reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD);
+        projectCardPages[activeProjectCardPageId].classList.remove(ACTIVE_PROJECT_CARD_PAGE);
+        let reqProjectCardElement = projectCardPages[reqProjectCardPageId];
+        reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD_PAGE);
         reqProjectCardElement.scrollIntoView({ behavior: "smooth", block: "start" });
-        changeProjectCardNumber(reqProjectCardId + 1, projectCards.length);
+        changeProjectCardNumber(reqProjectCardPageId + 1, projectCardPages.length);
     }
 }
 
 function handleProjectCardDownEvent() {
     // console.log("Project Card Down Clicked!!");
-    projectCards = getAllProjectCards();
-    let activeProjectCardId = getCurrentActiveCardIndex();
-    let reqProjectCardId = activeProjectCardId + 1;
-    if (reqProjectCardId >= projectCards.length) {
+    projectCardPages = getAllProjectCardPages();
+    let activeProjectCardPageId = getCurrentActiveCardIndex();
+    let reqProjectCardPageId = activeProjectCardPageId + 1;
+    if (reqProjectCardPageId >= projectCardPages.length) {
         // Invalid Id
     } else {
-        projectCards[activeProjectCardId].classList.remove(ACTIVE_PROJECT_CARD);
-        let reqProjectCardElement = projectCards[reqProjectCardId];
-        reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD);
+        projectCardPages[activeProjectCardPageId].classList.remove(ACTIVE_PROJECT_CARD_PAGE);
+        let reqProjectCardElement = projectCardPages[reqProjectCardPageId];
+        reqProjectCardElement.classList.add(ACTIVE_PROJECT_CARD_PAGE);
         reqProjectCardElement.scrollIntoView({ behavior: "smooth", block: "start" });
-        changeProjectCardNumber(reqProjectCardId + 1, projectCards.length);
+        changeProjectCardNumber(reqProjectCardPageId + 1, projectCardPages.length);
     }
 }
 
-function changeProjectCardNumber(reqProjectNumber, totalProjects) {
+function changeProjectCardNumber(reqProjectCardPageId, totalProjects) {
     let projectNumberElement = document.getElementsByClassName("pcnav-number")[0];
-    projectNumberElement.textContent = reqProjectNumber + "/" + totalProjects;
+    projectNumberElement.textContent = reqProjectCardPageId + "/" + totalProjects;
 }
 
 function setCurrentProjectNumber() {
     let projectNumberElement = document.getElementsByClassName("pcnav-number")[0];
-    projectCards = getAllProjectCards();
-    projectNumberElement.textContent = 1 + "/" + projectCards.length;
+    projectCardPages = getAllProjectCardPages();
+    projectNumberElement.textContent = 1 + "/" + projectCardPages.length;
 }
 
 function closeOverlay() {
