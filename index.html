@@ -168,6 +168,29 @@
                                 </div>
                                 <div class="section-card">
                                     <div class="card-content">
+                                        <div class="card-header">Graduate :-</div>
+                                        <div class="card-body">
+                                            <div>
+                                                <h1><b>Master Of Science (Computer Science)</b></h1>
+                                                <h4>University of Southern California, Los Angeles, CA, United States</h4>
+                                                <h4>January 2023 - December 2024 (Or July 2024 - Early Graduation)</h4>
+                                                <h4><b>Courses :</b></h4>
+                                                <div class="two-column-list">
+                                                    <ul>
+                                                        <li>CSCI-578 : Analysis of Algorithms</li>
+                                                        <li>CSCI-585 : Database Systems</li>
+                                                        <li>CSCI-571 : Web Technologies</li>
+                                                        <li>CSCI-576 : Multimedia Systems Design</li>
+                                                        <li>CSCI-572 : Information Retrieval and Web Search Engines</li>
+                                                        <li>CSCI-499 : Introduction to Human-Computer Interaction</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-card">
+                                    <div class="card-content">
                                         <div class="card-header">Under-Graduate :-</div>
                                         <div class="card-body">
                                             <div>
@@ -191,29 +214,6 @@
                                                         <li>Software designing Methodologies</li>
                                                         <li>Cloud Computing</li>
                                                         <li>Computer Forensics and Cybersecurity</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section-card">
-                                    <div class="card-content">
-                                        <div class="card-header">Graduate :-</div>
-                                        <div class="card-body">
-                                            <div>
-                                                <h1><b>Master Of Science (Computer Science)</b></h1>
-                                                <h4>University of Southern California, Los Angeles, CA, United States</h4>
-                                                <h4>January 2023 - December 2024 (Or July 2024 - Early Graduation)</h4>
-                                                <h4><b>Courses :</b></h4>
-                                                <div class="two-column-list">
-                                                    <ul>
-                                                        <li>CSCI-578 : Analysis of Algorithms</li>
-                                                        <li>CSCI-585 : Database Systems</li>
-                                                        <li>CSCI-571 : Web Technologies</li>
-                                                        <li>CSCI-576 : Multimedia Systems Design</li>
-                                                        <li>CSCI-572 : Information Retrieval and Web Search Engines</li>
-                                                        <li>CSCI-499 : Introduction to Human-Computer Interaction</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -303,7 +303,7 @@
                                     class="ccb-ele nav-item nav-link"
                                     onclick="handleSectionCardChangeButtonEvent(this)"
                                 >
-                                    <span class="ccb-content">Under-Graduate</span>
+                                    <span class="ccb-content">Graduate</span>
                                     <span class="ccb-icon">></span>
                                 </div>
                                 <div
@@ -311,7 +311,7 @@
                                     class="ccb-ele nav-item nav-link"
                                     onclick="handleSectionCardChangeButtonEvent(this)"
                                 >
-                                    <span class="ccb-content">Graduate</span>
+                                    <span class="ccb-content">Under-Graduate</span>
                                     <span class="ccb-icon">></span>
                                 </div>
                                 <div
@@ -479,6 +479,46 @@
                                         </div>
                                     </div>
 
+                                    <div class="card project-card" id="project8">
+                                        <div data-selection="#project8" class="project-card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">HTTP Sink Connector for Kafka</h3>
+                                            <p class="card-text">Java, Spring Boot, Apache HTTP, Kafka</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card project-card" id="project9">
+                                        <div data-selection="#project9" class="project-card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Automated Testing Micro-service</h3>
+                                            <p class="card-text">Java, Spring Boot, Micro-services, Kubernetes, Docker, HTML, CSS</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card project-card" id="project10">
+                                        <div data-selection="#project10" class="project-card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Error Classification Protocol</h3>
+                                            <p class="card-text">Java, Shell Scripting, XML, CSV</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card project-card" id="project11">
+                                        <div data-selection="#project11" class="project-card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">BSS adapter for JSR89 to JSR264 conversion</h3>
+                                            <p class="card-text">Java, XML</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="card project-card" id="project12">
+                                        <div data-selection="#project12" class="project-card-body" onclick="showProjectInfo(this)">
+                                            <h3 class="card-title">Compensation handler for partial provisioning issues</h3>
+                                            <p class="card-text">Java XML</p>
+                                            <!-- <a href="#" onclick="showProjectInfo(this)" class="btn btn-outline-secondary">More Info!</a> -->
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -596,6 +636,36 @@
                                 </div>
 
                                 <div data-selection="#project7" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet!</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project8" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet!</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project9" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet!</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project10" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet!</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project11" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet!</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project12" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet!</h1>
                                     </div>
