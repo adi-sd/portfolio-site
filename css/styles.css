@@ -604,13 +604,25 @@ table.card-table td {
     justify-content: center;
 }
 
-.project-card-body > h3 {
-    font-size: 1.8rem;
+.project-card-date {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    padding: 3px;
+    margin-top: 5px;
+    top: 2%;
+    right: 2%;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.project-card-title {
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
-.project-card-body > p {
-    font-size: 1.2rem;
+.project-card-text {
+    font-size: 1.1rem;
 }
 
 .project-info-card-container {
