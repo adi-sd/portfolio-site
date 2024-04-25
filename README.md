@@ -1,5 +1,5 @@
 # PortfolioSite
 
-Personal Portfolio
+Personal Portfolio and Resumé
 
 
