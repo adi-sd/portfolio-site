@@ -469,7 +469,9 @@ table.card-table td {
 .work-card-description {
     height: 65%;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll !important;
+    scroll-behavior: smooth;
 }
 
 .work-card-desc-header {
@@ -480,7 +482,7 @@ table.card-table td {
 
 .work-card-desc-body {
     margin-left: 30px;
-    font-size: 20px; /* Need to update */
+    font-size: 20px;
 }
 
 .work-card-desc-body > ul > li > span {
