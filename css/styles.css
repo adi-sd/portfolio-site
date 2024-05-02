@@ -84,14 +84,34 @@ body {
     border-bottom: solid 1px #ffffff;
     border-left: solid 10px #ffffff;
     border-right: solid 10px #ffffff;
-    height: 50px;
+    height: 55px;
+    width: fit-content;
 }
 
 .brand-text {
     font-size: 3rem;
     font-family: "WindSong", cursive;
-    margin-bottom: 2px;
-    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.brand-text::first-letter {
+    font-size: 6rem;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.svg-icon-container:hover {
+    animation: bounce 0.5s infinite;
+    cursor: none;
 }
 
 .nav-item {
@@ -111,54 +131,6 @@ body {
 
 #main-navbar li:hover {
     color: gray;
-}
-
-/* Navbar Brand Icon */
-
-@keyframes colorLoop {
-    0% {
-        fill: #bbe1fa;
-    }
-    10% {
-        fill: #3282b8;
-    }
-    20% {
-        fill: #0f4c75;
-    }
-    30% {
-        fill: #1b313d;
-    }
-    40% {
-        fill: #141f25;
-    }
-    60% {
-        fill: #141f25;
-    }
-    70% {
-        fill: #1b313d;
-    }
-    80% {
-        fill: #3282b8;
-    }
-    90% {
-        fill: #bbe1fa;
-    }
-    100% {
-        fill: #ffffff;
-    }
-}
-
-.navbar-logo:hover .svg-icon circle {
-    animation: colorLoop 2s infinite linear;
-}
-
-.svg-icon-container .svg-icon circle {
-    transition: fill 0.5s;
-}
-
-.svg-icon-container svg {
-    position: relative;
-    z-index: 100;
 }
 
 /* Home */
