@@ -267,7 +267,7 @@ body {
     max-height: 80%;
     width: 100%;
     max-width: 100%;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     overflow: hidden;
 }
 
@@ -335,7 +335,7 @@ body {
 }
 
 ul.card-list {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     list-style: square;
     color: rgba(255, 255, 255, 0.5);
 }
