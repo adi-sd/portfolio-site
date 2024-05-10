@@ -376,7 +376,7 @@ table.card-table td {
 }
 
 .technical-skills-container {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -385,12 +385,13 @@ table.card-table td {
 .skills-list-subsection {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .skills-title {
     font-size: 25px;
     font-weight: bold;
-    width: 28%;
+    width: 26%;
     text-align: center;
 }
 
