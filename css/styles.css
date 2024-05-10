@@ -375,26 +375,42 @@ table.card-table td {
     margin: 0;
 }
 
-.technical-skills-list {
-    column-count: 4;
-    column-gap: 1rem;
+.technical-skills-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.technical-skills-list > ul {
-    list-style: none;
+.skills-list-subsection {
+    display: flex;
+    align-items: center;
 }
 
-.technical-skills-list > ul > li {
+.skills-title {
+    font-size: 25px;
+    font-weight: bold;
+    width: 28%;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    margin: 0px 5px;
+}
+
+.skill-item {
+    width: fit-content;
     font-size: 1.3rem;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     margin: 0.5rem;
-    padding: 0.3rem;
+    padding: 0.5rem 1rem;
     text-wrap: nowrap;
 }
 
-.technical-skills-list > ul > li:hover {
+.skill-item:hover {
     border: 1px solid rgba(255, 255, 255, 1);
 }
 
@@ -436,6 +452,14 @@ table.card-table td {
     margin-right: 20px;
     font-size: 20px;
     padding-top: 10px;
+}
+
+.work-card-summary {
+    font-size: 20px;
+}
+
+.work-card-summary > p {
+    padding: 5px 10px;
 }
 
 .work-card-description {
