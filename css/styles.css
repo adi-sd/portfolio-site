@@ -801,13 +801,40 @@ table.card-table td {
 
 /* contact */
 
+.contact-option-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-option-container > span > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+}
+
+.contact-option-container > span:hover > a {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.contact-option-container > span {
+    display: none;
+}
+
+.contact-option-container:hover > span {
+    display: block;
+    transition: all 1s;
+}
+
 .contact-icon {
     height: 2.8rem;
     width: 2.8rem;
-    margin: 2.8rem;
+    margin: 0 2.8rem;
 }
 
-.contact-icon:hover > a > svg {
+.contact-option-container:hover > .contact-icon > a > svg {
     animation: bounce 0.5s infinite;
     cursor: pointer;
 }
