@@ -289,3 +289,12 @@ function showProjectInfo(currentProjectCard) {
         }
     }
 }
+
+function openProjectCode(event, codeUrl) {
+    stopEventPropagation(event);
+    window.open(codeUrl, "_blank");
+}
+
+function stopEventPropagation(event) {
+    event.stopPropagation();
+}
