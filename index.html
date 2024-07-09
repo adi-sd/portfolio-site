@@ -102,8 +102,8 @@
         </div>
 
         <div id="content-frame" class="d-flex flex-nowrap">
-            <!-- Home Section -->
 
+            <!-- Home Section -->
             <section id="home" class="active-section">
                 <!-- <div class="home"><h1>Home</h1></div> -->
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
@@ -469,10 +469,23 @@
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
                     <div class="section-content d-flex flex-column align-items-center project-section-content">
                         <div class="project-cards">
+
                             <div data-selection="#page1" class="project-cards-container-page active-project-card-page">
                                 <div class="project-grid-container">
 
                                     <div class="card project-card" id="project1" data-selection="#project1" onclick="showProjectInfo(this)">
+                                        <div class="project-card-body">
+                                            <div class="project-card-date"><span>May 2024</span></div>
+                                            <h3 class="project-card-title">Spotify Clone</h3>
+                                            <p class="project-card-text">Next.js, React.js, Tailwindcss, Supabase DB</p>
+                                            <div class="project-card-code-icon" onclick="openProjectCode(event, 'https:\/\/github.com/adi-sd/spotify-clone')">
+                                                <span>Code</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card project-card" id="project2" data-selection="#project2" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <div class="project-card-date"><span>December 2023</span></div>
                                             <h3 class="project-card-title">Video Library Search with Video Clip Query</h3>
@@ -484,7 +497,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project2" data-selection="#project2" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project3" data-selection="#project3" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <div class="project-card-date"><span>October 2023</span></div>
                                             <h3 class="project-card-title">Object Detection from an RGB Image</h3>
@@ -496,7 +509,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project3" data-selection="#project3" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project4" data-selection="#project4" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <div class="project-card-date"><span>September 2023</span></div>
                                             <h3 class="project-card-title">EBay Window-Shopping Application</h3>
@@ -508,21 +521,19 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project4" data-selection="#project4" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project5" data-selection="#project5" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <div class="project-card-date"><span>July 2023</span></div>
                                             <h3 class="project-card-title">Portfolio Web Site</h3>
                                             <p class="project-card-text">HTML, CSS, JavaScript, Bootstrap 5, Google Fonts, Font Awesome</p>
                                             <div class="project-card-code-icon" onclick="openProjectCode(event, 'https\:\/\/github.com/adi-sd/portfolio-site')">
                                                 <span>Code</span>
-                                                <a href="#" target="_blank" onclick="stopEventPropagation(event)">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
-                                                </a>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project5" data-selection="#project5" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project6" data-selection="#project6" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <div class="project-card-date"><span>December 2019</span></div>
                                             <h3 class="project-card-title">Bulk Resume Shortlisting</h3>
@@ -534,7 +545,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project6" data-selection="#project6" onclick="showProjectInfo(this)">
+                                </div>
+                            </div>
+
+                            <div data-selection="#page2" class="project-cards-container-page active-project-card-page">
+                                <div class="project-grid-container">
+
+                                    <div class="card project-card" id="project7" data-selection="#project7" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <div class="project-card-date"><span>May 2018</span></div>
                                             <h3 class="project-card-title">Cyber Forensic framework for PaaS Cloud Service Providers</h3>
@@ -548,11 +565,12 @@
 
                                 </div>
                             </div>
-                            <div data-selection="#page2" class="project-cards-container-page">
+
+                            <div data-selection="#page3" class="project-cards-container-page">
                                 <div class="project-grid-container">
                                     
 
-                                    <div class="card project-card" id="project7" data-selection="#project7" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project13" data-selection="#project13" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <h3 class="project-card-title">OSS External System Simulator</h3>
                                             <p class="project-card-text">Java, Restful APIs, Apache HTTP Library, XML, JSON</p>
@@ -563,7 +581,7 @@
                                     </div>
 
 
-                                    <div class="card project-card" id="project8" data-selection="#project8" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project14" data-selection="#project14" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <h3 class="project-card-title">HTTP Sink Connector for Kafka</h3>
                                             <p class="project-card-text">Java, Spring Boot, Apache HTTP, Kafka</p>
@@ -573,7 +591,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project9" data-selection="#project9" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project15" data-selection="#project15" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <h3 class="project-card-title">Automated Testing Micro-service</h3>
                                             <p class="project-card-text">Java, Spring Boot, Micro-services, Kubernetes, Docker, HTML, CSS</p>
@@ -583,7 +601,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project10" data-selection="#project10" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project16" data-selection="#project16" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <h3 class="project-card-title">Error Classification Protocol</h3>
                                             <p class="project-card-text">Java, Shell Scripting, XML, CSV</p>
@@ -593,7 +611,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project11" data-selection="#project11" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project17" data-selection="#project17" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <h3 class="project-card-title">BSS adapter for JSR89 to JSR264 conversion</h3>
                                             <p class="project-card-text">Java, XML</p>
@@ -603,7 +621,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card project-card" id="project12" data-selection="#project12" onclick="showProjectInfo(this)">
+                                    <div class="card project-card" id="project18" data-selection="#project18" onclick="showProjectInfo(this)">
                                         <div class="project-card-body">
                                             <h3 class="project-card-title">Compensation handler for partial provisioning issues</h3>
                                             <p class="project-card-text">Java XML</p>
@@ -616,6 +634,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="project-page-navigation">
                             <div class="pcnav-main d-flex align-items-center justify-content-center">
                                 <div class="pcnav-button d-flex flex-column align-items-center justify-content-center">
@@ -633,10 +652,17 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="project-info-card-container">
                             <div class="project-info-card-overlay">
 
-                                <div data-selection="#project1" class="project-info-card" onclick="closeOverlay()">
+                                 <div data-selection="#project1" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 4</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project2" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <div class="project-info-card-header">
                                             <div class="project-date">December 2023</div>
@@ -661,7 +687,7 @@
                                     </div>
                                 </div>
 
-                                <div data-selection="#project2" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project3" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <div class="project-info-card-header">
                                             <div class="project-date">October 2023</div>
@@ -686,7 +712,7 @@
                                     </div>
                                 </div>
 
-                                <div data-selection="#project3" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project4" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <div class="project-info-card-header">
                                             <div class="project-date">September 2023</div>
@@ -711,55 +737,91 @@
                                     </div>
                                 </div>
 
-                                <div data-selection="#project4" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project5" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 4</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project5" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project6" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 5</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project6" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project7" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 6</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project7" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project8" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 7</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project8" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project9" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 8</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project9" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project10" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 9</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project10" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project11" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 10</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project11" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project12" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 10</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project13" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 11</h1>
                                     </div>
                                 </div>
 
-                                <div data-selection="#project12" class="project-info-card" onclick="closeOverlay()">
+                                <div data-selection="#project13" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 12</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project14" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 12</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project15" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 12</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project16" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 12</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project17" class="project-info-card" onclick="closeOverlay()">
+                                    <div class="project-info-card-body">
+                                        <h1>No Information Yet! Project 12</h1>
+                                    </div>
+                                </div>
+
+                                <div data-selection="#project18" class="project-info-card" onclick="closeOverlay()">
                                     <div class="project-info-card-body">
                                         <h1>No Information Yet! Project 12</h1>
                                     </div>
@@ -842,6 +904,7 @@
                 <!-- <div id="footer-row"></div> -->
             </section>
         </div>
+
         <!-- Bootstrap 5 JavaScript -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
