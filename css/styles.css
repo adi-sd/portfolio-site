@@ -652,7 +652,7 @@ table.card-table td {
 .project-card-code-icon {
     width: fit-content;
     height: 35px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
