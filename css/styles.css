@@ -393,11 +393,13 @@ table.card-table td {
     font-weight: bold;
     width: 26%;
     text-align: center;
+    text-wrap: nowrap;
 }
 
 .skills-container {
     display: flex;
     margin: 0px 5px;
+    flex-wrap: nowrap;
 }
 
 .skill-item {
