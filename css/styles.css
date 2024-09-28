@@ -441,20 +441,10 @@ table.card-table td {
 }
 
 .work-card-header {
-    height: 20%;
+    height: 25%;
     width: 100%;
     font-size: 50px;
     font-weight: bold;
-    padding-bottom: -10px;
-    border-bottom: rgba(255, 255, 255, 0.5) solid;
-}
-
-.work-card-facts {
-    height: 15%;
-    width: 100%;
-    margin-right: 20px;
-    font-size: 20px;
-    padding-top: 10px;
 }
 
 .work-card-summary {
@@ -466,11 +456,17 @@ table.card-table td {
 }
 
 .work-card-description {
-    height: 65%;
+    height: 75%;
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: scroll !important;
+    overflow-x: hidden;
+    overflow-y: scroll !important;
     scroll-behavior: smooth;
+}
+
+.work-card-description-content {
+    height: 100%;
+    width: 100%;
+    padding-right: 20px;
 }
 
 .work-card-desc-header {
