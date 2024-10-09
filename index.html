@@ -27,7 +27,25 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
-        <link rel="stylesheet" href="./css/styles.css" />
+        <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+        <script>
+            function loadCSS() {
+                let link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.type = "text/css";
+
+                if (window.innerWidth < 768) {
+                    link.href = "./css/small-styles.css"; // CSS for small screens
+                } else {
+                    link.href = "./css/large-styles.css"; // CSS for larger screens
+                }
+
+                document.head.appendChild(link);
+            }
+
+            window.onload = loadCSS;
+            window.onresize = loadCSS;
+         </script>
         <script src="https://kit.fontawesome.com/08dc446011.js" crossorigin="anonymous"></script>
     </head>
 
@@ -36,7 +54,7 @@
         <div class="frame nav-frame">
             <section id="navbar">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                    <div class="container-fluid container-fluid d-flex align-items-center m-5 p-0">
+                    <div class="container-fluid container-fluid d-flex align-items-center">
                         <div class="navbar-logo d-flex align-items-center justify-content-center">
                             <a class="navbar-brand ms-4" href="#home">
                                 <h1 class="brand-text"><i>Aditya S. Dhage</i></h1>
@@ -108,7 +126,7 @@
                 <!-- <div class="home"><h1>Home</h1></div> -->
                 <div class="section-container d-flex flex-column align-items-center justify-content-center">
                     <div class="section-content home-content d-inline-flex align-items-center justify-content-center">
-                        <div class="home-text-container ms-2 me-5">
+                        <div class="home-text-container">
                             <div class="home-inner-text-container d-flex flex-column align-content-center">
                                 <p class="home-text-1">Hey There!</p>
                                 <br />
@@ -117,7 +135,7 @@
                                 <p class="home-text-4">Welcome to my page...</p>
                             </div>
                         </div>
-                        <div class="home-image-container ms-5 me-2 fading-border">
+                        <div class="home-image-container fading-border">
                             <img
                                 src="./images/AdityaDhage.jpg"
                                 class="home-image"

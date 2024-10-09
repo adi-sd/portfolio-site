@@ -73,6 +73,8 @@ body {
 
 #navbar > nav {
     max-height: 150px;
+    padding: 0;
+    margin: 2%;
 }
 
 #navbar > nav:hover {
