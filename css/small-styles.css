@@ -478,14 +478,16 @@ table.card-table td {
     height: 75%;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll !important;
-    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 .work-card-description-content {
     height: 100%;
     width: 100%;
     padding-right: 20px;
+    margin-top: 20px;
+    scroll-snap-align: start;
 }
 
 .work-card-desc-header {
