@@ -69,6 +69,42 @@ body {
     background-color: grey;
 }
 
+/* Overlay */
+.overlay-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #040d12;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.overlay-message h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-message p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .overlay-message {
+        display: none; /* Hide the message on larger screens */
+    }
+}
+
 /* Navbar */
 
 #navbar > nav {
